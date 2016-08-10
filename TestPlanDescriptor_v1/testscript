@@ -1,0 +1,76 @@
+invar="$(grep "input" sequence|cut -d ':' -f 2 )"
+echo $invar > inputseq
+onlyvar="$(echo $invar|cut -d ' ' -f 2- )"
+
+seq="$(grep "seq" sequence|cut -d ':' -f 1 )"
+seq="$(echo $seq| cut -d '=' -f 2- )"
+echo "$seq;">> inputseq
+
+grep "input" sequence|cut -d ':' -f 2 > outseq
+grep "output" sequence|cut -d ':' -f 2 >> outseq
+grep "seq" sequence|cut -d ':' -f 2 >> outseq
+
+consChecker outseq > check.ys
+echo "check $onlyvar" >> inputseq
+consChecker inputseq > output.ys
+echo "(check)" >> output.ys
+echo "(show-model)" >> output.ys
+
+chmod +x yices
+yices output.ys > logInputP
+
+grep '=' logInputP >> checkline
+grep -w ')' logInputP>log
+
+for i in $(cat logInputP);
+do
+    echo $i>>log
+done
+
+grep ')' log > extract
+
+for i in $(cat extract)
+do
+	a="$(echo $i|cut -d ')' -f 1) "
+	mystring=$mystring$a
+done
+
+gcc test.c
+a="$(./a.out $mystring)"
+
+
+out="$(grep "output" sequence|cut -d ':' -f 2 )"
+onlyoutvar="$(echo $out |cut -d ' ' -f 2- )"
+#getCount="$(echo $onlyoutvar|wc -c ',' )"
+#echo $getCount
+
+num=`echo $onlyoutvar |  awk 'BEGIN{FS=","} {print NF?NF-1:0} '`
+num=`expr $num + 1`
+for i in `seq $num`
+do 
+  var="$(echo $onlyoutvar|cut -d ' ' -f $i)"
+  val="$(echo $a|cut -d ' ' -f $i)"
+   if [ $i -lt $num ]
+   then 
+     var="$(echo $var|cut -d ',' -f 1)"
+	 echo "(= $var $val)" >> checkline
+#echo $var
+   else
+     var="$(echo $var|cut -d ';' -f 1)"
+	 echo "(= $var $val)" >> checkline
+#echo $var
+   fi
+done
+#echo "(= Temp $a)" >> checkline
+
+while read line
+do
+    echo "(assert$line)" >> check.ys
+done < checkline
+
+echo "(check)" >> check.ys
+echo "(show-model)" >> check.ys
+
+yices check.ys
+
+rm logInputP output.ys extract outseq checkline check.ys inputseq log a.out

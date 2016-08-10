@@ -1,0 +1,7 @@
+input : int  Flag;
+output: int  TempFailure;
+
+seq = (Flag = 1):(Flag = 1) && (TempFailure = 1);
+
+
+
