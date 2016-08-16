@@ -1,0 +1,278 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: diag214.pstex
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Tue Apr 11 11:57:37 2006
+%%For: pallab@localhost.localdomain ()
+%%BoundingBox: 0 0 431 208
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 208 moveto 0 0 lineto 431 0 lineto 431 208 lineto closepath clip newpath
+-51.3 279.7 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% Polyline
+7.500 slw
+ [15 60] 60 sd
+n 2550 1425 m
+ 2550 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 3150 1425 m
+ 3150 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 3750 1425 m
+ 3750 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 4350 1425 m
+ 4350 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 4950 1425 m
+ 4950 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 5550 1425 m
+ 5550 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 6150 1425 m
+ 6150 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 6750 1425 m
+ 6750 4650 l gs col0 s gr  [] 0 sd
+% Polyline
+ [15 60] 60 sd
+n 7350 1425 m
+ 7350 4650 l gs col0 s gr  [] 0 sd
+/Helvetica-Bold ff 210.00 scf sf
+2400 1365 m
+gs 1 -1 sc (T1) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+3000 1365 m
+gs 1 -1 sc (T2) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+3600 1365 m
+gs 1 -1 sc (T3) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+4200 1365 m
+gs 1 -1 sc (T4) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+4800 1365 m
+gs 1 -1 sc (T5) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+5400 1365 m
+gs 1 -1 sc (T6) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+6000 1365 m
+gs 1 -1 sc (T7) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+6600 1365 m
+gs 1 -1 sc (T8) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+7200 1365 m
+gs 1 -1 sc (T9) col0 sh gr
+% Polyline
+n 2250 2115 m 2550 2115 l 2550 1815 l 2850 1815 l 2850 2115 l 3150 2115 l
+ 3150 1815 l 3450 1815 l 3450 2115 l 3750 2115 l 3750 1815 l
+ 4050 1815 l 4050 2115 l 4350 2115 l 4350 1815 l 4650 1815 l
+ 4650 2115 l 4950 2115 l 4950 1815 l 5250 1815 l 5250 2115 l
+ 5550 2115 l 5550 1815 l 5850 1815 l 5850 2115 l 6150 2115 l
+ 6150 1815 l 6450 1815 l 6450 2115 l 6750 2115 l 6750 1815 l
+ 7050 1815 l 7050 2115 l 7350 2115 l 7350 1815 l 7650 1815 l
+ 7650 2115 l
+ 7950 2115 l gs col0 s gr 
+% Polyline
+n 2250 2715 m 2625 2715 l 2700 2490 l 6300 2490 l 6375 2715 l
+ 7950 2715 l gs col0 s gr 
+% Polyline
+n 2250 3015 m 3225 3015 l 3300 2790 l 6825 2790 l 6900 3015 l
+ 7950 3015 l gs col0 s gr 
+% Polyline
+n 2625 2715 m 2700 2715 l
+ 2775 2490 l gs col0 s gr 
+% Polyline
+n 6300 2490 m 6375 2490 l
+ 6450 2715 l gs col0 s gr 
+% Polyline
+n 3225 3015 m 3300 3015 l
+ 3375 2790 l gs col0 s gr 
+% Polyline
+n 6825 2790 m 6900 2790 l
+ 6975 3015 l gs col0 s gr 
+% Polyline
+n 2250 3315 m 3405 3315 l 3510 3540 l 5025 3540 l 5100 3315 l 5625 3315 l
+ 5700 3540 l 6225 3540 l 6300 3315 l 6825 3315 l 6900 3540 l
+
+ 7950 3540 l gs col0 s gr 
+% Polyline
+n 2250 3540 m 3405 3540 l 3510 3315 l 5025 3315 l 5100 3540 l 5625 3540 l
+ 5700 3315 l 6225 3315 l 6300 3540 l 6825 3540 l 6900 3315 l
+
+ 7950 3315 l gs col0 s gr 
+% Polyline
+n 4425 3915 m 4500 3915 l
+ 4575 3690 l gs col0 s gr 
+% Polyline
+n 5025 3690 m 5100 3690 l
+ 5175 3915 l gs col0 s gr 
+% Polyline
+n 5625 3915 m 5700 3915 l
+ 5775 3690 l gs col0 s gr 
+% Polyline
+n 6225 3690 m 6300 3690 l
+ 6375 3915 l gs col0 s gr 
+% Polyline
+n 2250 4215 m 2625 4215 l 2700 4440 l 3225 4440 l 3300 4215 l 3825 4215 l
+ 3900 4440 l 4425 4440 l 4500 4215 l 5025 4215 l 5100 4440 l
+ 5625 4440 l 5700 4215 l 6225 4215 l 6300 4440 l 6825 4440 l
+ 6900 4215 l 7425 4215 l 7500 4440 l
+ 7950 4440 l gs col0 s gr 
+% Polyline
+n 2250 4440 m 2625 4440 l 2700 4215 l 3225 4215 l 3300 4440 l 3825 4440 l
+ 3900 4215 l 4425 4215 l 4500 4440 l 5025 4440 l 5100 4215 l
+ 5625 4215 l 5700 4440 l 6225 4440 l 6300 4215 l 6825 4215 l
+ 6900 4440 l 7425 4440 l 7500 4215 l
+ 7950 4215 l gs col0 s gr 
+% Polyline
+n 2250 3915 m 4425 3915 l 4500 3690 l 5025 3690 l 5100 3915 l 5625 3915 l
+ 5700 3690 l 6225 3690 l 6300 3915 l 8010 3915 l 7950 3900 l
+
+ 7950 3915 l gs col0 s gr 
+/Helvetica-Bold ff 210.00 scf sf
+1800 2715 m
+gs 1 -1 sc (req) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+1800 3015 m
+gs 1 -1 sc (gnt) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+1830 2115 m
+gs 1 -1 sc (clk) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+1080 3480 m
+gs 1 -1 sc (Data/Addr) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+1785 3915 m
+gs 1 -1 sc (rdy) col0 sh gr
+/Helvetica-Bold ff 210.00 scf sf
+855 4395 m
+gs 1 -1 sc (Master state) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+5265 3510 m
+gs 1 -1 sc (D1) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+5880 3510 m
+gs 1 -1 sc (A2) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+6465 3510 m
+gs 1 -1 sc (D2) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+2775 4410 m
+gs 1 -1 sc (IDLE) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+3360 4410 m
+gs 1 -1 sc (WAIT) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+3990 4410 m
+gs 1 -1 sc (INIT) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+4515 4395 m
+gs 1 -1 sc (ADDR) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+5115 4395 m
+gs 1 -1 sc (DATA) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+5715 4395 m
+gs 1 -1 sc (ADDR) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+6330 4395 m
+gs 1 -1 sc (DATA) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+6945 4395 m
+gs 1 -1 sc (IDLE) col0 sh gr
+/Helvetica-Bold ff 180.00 scf sf
+4080 3510 m
+gs 1 -1 sc (A1) col0 sh gr
+$F2psEnd
+rs

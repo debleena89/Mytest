@@ -1,0 +1,15 @@
+\section{References}
+
+1)http://fpl.cs.depaul.edu/jriely/547/extras/ClarkeKroening2003AnsiC.pdf
+
+2)V. D’Silva, D. Kroening, and G Weissenbacher "A Survey of Automated Techniques for
+Formal Software Verification" in IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF 
+INTEGRATED CIRCUITS AND SYSTEMS, VOL. 27, NO. 7, JULY 2008
+
+3)http://profs.sci.univr.it/~farinelli/courses/ar/slides/derivation-strategies.pdf
+
+4)https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-792.pdf
+
+5)A. Biere, A. Cimatti, E. M. Clarke, O. Strichman and Y. Zhu 
+"Bounded Model Checking" Vol. 58 of Advances in Computers, 2003.
+Academic Press (pre-print).

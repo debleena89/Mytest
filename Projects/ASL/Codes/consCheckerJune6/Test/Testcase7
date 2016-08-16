@@ -1,0 +1,10 @@
+
+bool sys1ok, sys1nok;
+int a , b, c, d;
+assert(a == 0);
+assert(b == 0);
+assert(c != 0);
+assert(d != 0);
+assert(sys1ok == (a && b));
+assert(sys1nok == (c || d));
+

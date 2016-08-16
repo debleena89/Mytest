@@ -1,0 +1,93 @@
+\chapter*{}
+\vspace*{-2in}
+%Abstract\markboth{Abstract}{Abstract}}
+\begin{center}
+\Large \bf {Abstract}
+\end{center}
+%\vspace{-.2in}
+
+\noindent
+In recent times, most leading
+chip design companies are seriously investigating the possibility of
+integrating property verification into their pre-silicon validation flows.
+Property verification allows the designer to express the key
+correctness requirements of a design in terms of formal properties and
+verify them over a given implementation. 
+Property verification is predominantly used in two forms in pre-silicon
+validation, namely (a) dynamic property verification (DPV), and
+(b) static Formal Property Verification (FPV).
+
+\noindent
+Existing property verification technology is poised at an interesting point. 
+The benefits of property verification have been established quite
+emphatically in the last decade. Researchers have analyzed several
+historically significant failures and have shown that the use of property
+verification could have detected the bug in the design.
+Yet, the adoption of property verification techniques into the 
+pre-silicon validation flow of chip design companies has been retarded 
+by the following factors:
+\begin{itemize}
+
+\item {\em FPV Capacity:} Current FPV techniques do not scale
+    beyond small circuit modules. 
+
+\item {\em DPV Coverage:} The main criticism of the DPV approach is that 
+	only those behaviors that are covered by simulation are examined for 
+	property violation. 
+
+\end{itemize}
+
+\noindent
+This thesis has two main motivations:
+
+\begin{itemize}
+
+\item We believe that the scalability and efficiency of formal and 
+	semi-formal verification can be improved by adopting specification styles 
+	that syntactically facilitate abstractions and pruning.
+
+\item We believe that the assertion coverage in DPV 
+	can be improved by guiding the simulation through formal 
+	methods.
+\end{itemize}
+\noindent
+The main objective of this thesis is to study the above issues
+and propose methods for accelerating formal, semi-formal and dynamic 
+property verification.
+In particular, we have the following contributions:
+
+\begin{itemize}
+\item {\em Accelerating Property Coverage in DPV:} We have defined an 
+	automated methodology that can analyze formal properties and produce 
+	tests that trigger them. This has been integrated within a 
+	constrained random test architecture to accelerate coverage of 
+	corner case assertions during DPV.
+
+\item {\em Context-sensitive specifications:} A significant fraction
+    of the correctness requirements in standard protocol descriptions 
+	are {\em context-sensitive}, i.e. they apply only when the 
+	protocol is in specific contexts. We have formalized a modeling 
+	style for expressing such properties and proposed algorithms 
+	for formal and semi-formal verification 
+	and consistency analysis for such properties.
+
+\item {\em Annotating Temporal Operators for Modular FPV:}
+	To ameliorate the state explosion
+    problem, there has been a paradigm shift from a system level FPV
+    perspective to a modular one. To capture module-level specifications, 
+	we have proposed an extension of Linear Temporal Logic by annotating 
+	temporal operators with input constraints. In addition, 
+	we have proposed a symbolic BDD-based algorithm for verifying such 
+	properties. 
+
+\item {\em An integrated DPV platform for UML Statechart validation:} 
+	We have developed a complete DPV platform for verifying temporal 
+	requirements over UML Statecharts. The DPV framework allows the user 
+	to specify correctness requirements in a rich assertion specification 
+	language and verifies them during simulation. 
+
+\end{itemize}
+\noindent
+We believe that the formal methods presented in
+this thesis will lead to wider adoption of property verification techniques 
+in the design validation flow.

@@ -1,0 +1,5 @@
+
+int Byte;
+int chnum;
+assume(chnum = 18);
+assert (Byte = chnum % 8);

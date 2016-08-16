@@ -1,0 +1,4 @@
+int x, y;
+assume(x > 1);
+assume(y > 1);
+assert( (x*y) > 1);

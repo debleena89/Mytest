@@ -1,0 +1,45 @@
+\input{preamble}
+
+\bibliographystyle {acm}
+
+\begin{document}
+\newtheorem {theorem} {Theorem} [chapter]
+\newtheorem {lemma} {Lemma} [chapter]
+\newtheorem {corollary} {Corollary} [chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{result}{Result}[chapter]
+\newtheorem{observation}{Observation}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{algorithm}{Algorithm}[chapter]
+\newtheorem{assumption}{Assumption}[chapter]
+
+\include{front_title}
+%\include{title}
+%\include{dedic}
+\newpage
+\newpage
+
+
+\parskip=.14in
+%\input {certi}
+\parskip=.008in
+%\include{pref}
+\parskip=.14in
+\pagenumbering{arabic}
+%\input {abstract}
+\newpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+%\listoftables
+\newpage
+\input{intro}
+\input{methods}
+\input{cbmc}
+\input{reference}
+
+\mbox{}
+\end {document}

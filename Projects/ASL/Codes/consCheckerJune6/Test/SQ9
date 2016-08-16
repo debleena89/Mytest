@@ -1,0 +1,6 @@
+
+int x, y, z;
+assume(x > 9);
+assume(z > 8);
+assert(z > (2+x));
+

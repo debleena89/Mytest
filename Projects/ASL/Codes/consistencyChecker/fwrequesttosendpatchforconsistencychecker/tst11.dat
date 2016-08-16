@@ -1,0 +1,10 @@
+
+   bool x , y, output ;
+  
+   assume ( x = 0);
+   assume ( y = 0);
+
+
+   assert ( x == y);
+   assert (output = x); 
+

@@ -1,0 +1,113 @@
+\input{preamble}
+
+\bibliographystyle {acm}
+
+\begin{document}
+\newtheorem {theorem} {Theorem} [chapter]
+\newtheorem {lemma} {Lemma} [chapter]
+\newtheorem {corollary} {Corollary} [chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{result}{Result}[chapter]
+\newtheorem{observation}{Observation}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{assumption}{Assumption}[chapter]
+%\newtheorem{theorem}{Theorem}[section]
+
+\include{front_title}
+%\include{title}
+%\include{dedic}
+\newpage
+\newpage
+
+
+\parskip=.14in
+%\input {certi}
+\parskip=.008in
+%\include{pref}
+\parskip=.14in
+\pagenumbering{arabic}
+%\input {abstract}
+\newpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+%\listoftables
+\newpage
+
+
+%\documentclass{article}
+
+
+%\begin{document}
+
+%\title{A short survey on Equivalence Checking methods for digital circuits}
+
+%\maketitle
+
+\chapter{Introduction}
+\par The process of equivalence checking is an important step in Electronic Design Automation (EDA), commonly used during the developments
+of system design, to formally check whether two circuits exhibit exactly the 
+same behavior. We begin by formally defining the notion of equivalence below.
+
+\begin{defn}
+Two circuits are said to be equivalent if their outputs match for every input sequence. 
+$\blacksquare$
+\end{defn}
+\noindent
+We explain the equivalence checking problem on the following example.
+
+\begin{example}
+\begin{figure}[!h]
+\centering
+\includegraphics[height=3cm, width=8cm]{equivalence.pdf}
+\caption{An example of two equivalent circuits} \label{fig1}
+\end{figure}
+
+Figure \ref{fig1} shows two different circuits. Figure-\ref{fig1}(a) shows a simple and-or circuit and Figure-\ref{fig1}(b) shows a circuit
+represented by NAND gates. These two designs are equivalent since they realize the same Boolean function \\ y = (ab + cd ).
+$\blacksquare$
+\end{example}
+
+% \par Now the product computation is defined as the set states of the product is the cross product of the states of the individual machines. 
+%That means, the global state is composed by taking one state from one machine and another state from another
+%machine.Then the concatenation of the state of the two machines $M_1$ and $M_2$ is called global state. 
+%The output function is defined as if in a state if the output match corresponding to all inputs then the output 
+%of the product machine is 1 and the output is 0 otherwise. 
+
+%\par If we see the output is 0 the two machines are not equivalent. That's not really the case. The case is whether
+%a global state when the output do not match is reachable or not.We can take every pair of states one from $M_1$ and $M_2$ 
+%forms a global state and obviously in all states the output will not match. The question is, starting from the initial state
+%can we reach the global state where there is an output mismatch. Then they are not equivalent. 
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[height=4cm]{stateMachine.pdf}
+%\caption{Finite State Machine} \label{fig0}
+%\end{figure}
+
+%\par  Figure-1 shows a finite state machine M(X,Y,$S_0$ , $S_1$, $\delta$, $\lambda$), where X is an input, Y is output, S is current 
+%state, $S_0$ is initial state, $\delta$ is a next state function which is defined as $\delta \colon X \times S \longrightarrow S $
+%and $\lambda$ is an output function which is defined as $\lambda \colon X \times S \longrightarrow Y $
+
+\noindent Equivalence checking is used when the design goes through any  transformation in 
+the VLSI design life cycle (e.g. high level synthesis, logic synthesis, technology mapping etc.) to
+check whether the functionality of the transformed design is equivalent to the original one. Depending on the nature
+of the circuits, combinational or sequential equivalence checking is employed. We explain each of these techniques in 
+the following discussion.
+
+\input{combEq.tex}
+\input{seqEq.tex}
+\input{toolEq.tex}
+\input{abcEq.tex}
+\newpage
+\input{jasperEq.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref}{}
+
+\end{document}
+ 

@@ -1,0 +1,9 @@
+
+int a,b;
+
+assert(a = 6);
+
+assert(b = 4);
+
+assume (a > b);
+

@@ -1,0 +1,7 @@
+
+int a;
+assume(a > 5);
+assume(a < 10 );
+assert((a == 6) || (a ==7));
+
+

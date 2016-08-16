@@ -1,0 +1,12 @@
+
+int a, b, c, d, f;
+
+assume(a <= b <= 4);
+
+assume(c < d < f < 8);
+
+assume((a + f) > 6 );
+
+
+
+

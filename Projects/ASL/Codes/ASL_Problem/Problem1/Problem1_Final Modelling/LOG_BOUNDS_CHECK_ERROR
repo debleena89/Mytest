@@ -1,0 +1,412 @@
+file autoPC.cpp: Parsing
+Converting
+Type-checking autoPC
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Unwinding loop c::main.0 iteration 1 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 2 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 3 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 4 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 5 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 6 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 7 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 8 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 9 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 10 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 11 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 12 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 13 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 14 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 15 file autoPC.cpp line 70 function main thread 0
+Unwinding loop c::main.0 iteration 16 file autoPC.cpp line 70 function main thread 0
+size of program expression: 587 steps
+simple slicing removed 3 assignments
+Generated 81 VCC(s), 49 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 with simplifier
+5305 variables, 11741 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 0.031s
+Building error trace
+
+Counterexample:
+
+State 3 file autoPC.cpp line 5 thread 0
+----------------------------------------------------
+  survstatbuf={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 4 file autoPC.cpp line 6 thread 0
+----------------------------------------------------
+  survstatbuf2={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 5 file autoPC.cpp line 9 thread 0
+----------------------------------------------------
+  No_liu1_data=0 (00000000000000000000000000000000)
+
+State 6 file autoPC.cpp line 10 thread 0
+----------------------------------------------------
+  No_liu2_data=0 (00000000000000000000000000000000)
+
+State 7 file autoPC.cpp line 11 thread 0
+----------------------------------------------------
+  liu1_notok=0 (00000000000000000000000000000000)
+
+State 8 file autoPC.cpp line 12 thread 0
+----------------------------------------------------
+  liu2_notok=8388608 (00000000100000000000000000000000)
+
+State 9 file <built-in> line 9 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_is_new_array=FALSE (0)
+
+State 10 file <built-in> line 18 thread 0
+----------------------------------------------------
+  constant_infinity_uint=0u (00000000000000000000000000000000)
+
+State 11 file <built-in> line 30 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 12 file <built-in> line 31 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 13 file <built-in> line 32 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 14 file <built-in> line 33 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000000000000000000000000000)
+
+State 21 file autoPC.cpp line 52 function main thread 0
+----------------------------------------------------
+  t=false (0)
+
+State 22 file autoPC.cpp line 53 function main thread 0
+----------------------------------------------------
+  on_off=true (1)
+
+State 23 file autoPC.cpp line 54 function main thread 0
+----------------------------------------------------
+  SYS1OK=false (0)
+
+State 24 file autoPC.cpp line 54 function main thread 0
+----------------------------------------------------
+  SYS2OK=false (0)
+
+State 25 file autoPC.cpp line 54 function main thread 0
+----------------------------------------------------
+  SYS1NOK=false (0)
+
+State 26 file autoPC.cpp line 54 function main thread 0
+----------------------------------------------------
+  SYS2NOK=false (0)
+
+State 27 file autoPC.cpp line 55 function main thread 0
+----------------------------------------------------
+  OK={ false, false, false, false, false, false } ({ 0, 0, 0, 0, 0, 0 })
+
+State 28 file autoPC.cpp line 56 function main thread 0
+----------------------------------------------------
+  NOK={ false, false, false, false, false, false, false } ({ 0, 0, 0, 0, 0, 0, 0 })
+
+State 29 file autoPC.cpp line 58 function main thread 0
+----------------------------------------------------
+  verifByte=0 (00000000000000000000000000000000)
+
+State 30 file autoPC.cpp line 59 function main thread 0
+----------------------------------------------------
+  verifBit=0 (00000000000000000000000000000000)
+
+State 31 file autoPC.cpp line 60 function main thread 0
+----------------------------------------------------
+  verifMask=0 (00000000)
+
+State 32 file autoPC.cpp line 60 function main thread 0
+----------------------------------------------------
+  verifMask=1 (00000001)
+
+State 33 file autoPC.cpp line 62 function main thread 0
+----------------------------------------------------
+  chnum=0 (00000000)
+
+State 34 file autoPC.cpp line 62 function main thread 0
+----------------------------------------------------
+  chnum=134 (10000110)
+
+State 35 file autoPC.cpp line 65 function main thread 0
+----------------------------------------------------
+  verifByte=16 (00000000000000000000000000010000)
+
+State 36 file autoPC.cpp line 66 function main thread 0
+----------------------------------------------------
+  verifBit=6 (00000000000000000000000000000110)
+
+State 37 file autoPC.cpp line 67 function main thread 0
+----------------------------------------------------
+  verifMask=64 (01000000)
+
+State 38 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 39 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 41 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[0l]=3 (00000011)
+
+State 42 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[0l]=208 (11010000)
+
+State 43 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=1 (00000000000000000000000000000001)
+
+State 46 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[1l]=18 (00010010)
+
+State 47 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[1l]=16 (00010000)
+
+State 48 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=2 (00000000000000000000000000000010)
+
+State 51 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[2l]=129 (10000001)
+
+State 52 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[2l]=64 (01000000)
+
+State 53 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=3 (00000000000000000000000000000011)
+
+State 56 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[3l]=65 (01000001)
+
+State 57 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[3l]=146 (10010010)
+
+State 58 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=4 (00000000000000000000000000000100)
+
+State 61 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[4l]=3 (00000011)
+
+State 62 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[4l]=196 (11000100)
+
+State 63 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=5 (00000000000000000000000000000101)
+
+State 66 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[5l]=0 (00000000)
+
+State 67 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[5l]=16 (00010000)
+
+State 68 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=6 (00000000000000000000000000000110)
+
+State 71 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[6l]=3 (00000011)
+
+State 72 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[6l]=16 (00010000)
+
+State 73 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=7 (00000000000000000000000000000111)
+
+State 76 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[7l]=210 (11010010)
+
+State 77 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[7l]=16 (00010000)
+
+State 78 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=8 (00000000000000000000000000001000)
+
+State 81 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[8l]=66 (01000010)
+
+State 82 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[8l]=16 (00010000)
+
+State 83 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=9 (00000000000000000000000000001001)
+
+State 86 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[9l]=18 (00010010)
+
+State 87 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[9l]=148 (10010100)
+
+State 88 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=10 (00000000000000000000000000001010)
+
+State 91 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[10l]=90 (01011010)
+
+State 92 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[10l]=128 (10000000)
+
+State 93 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=11 (00000000000000000000000000001011)
+
+State 96 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[11l]=18 (00010010)
+
+State 97 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[11l]=128 (10000000)
+
+State 98 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=12 (00000000000000000000000000001100)
+
+State 101 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[12l]=80 (01010000)
+
+State 102 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[12l]=128 (10000000)
+
+State 103 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=13 (00000000000000000000000000001101)
+
+State 106 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[13l]=3 (00000011)
+
+State 107 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[13l]=64 (01000000)
+
+State 108 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=14 (00000000000000000000000000001110)
+
+State 111 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[14l]=3 (00000011)
+
+State 112 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[14l]=224 (11100000)
+
+State 113 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=15 (00000000000000000000000000001111)
+
+State 116 file autoPC.cpp line 72 function main thread 0
+----------------------------------------------------
+  survstatbuf[15l]=65 (01000001)
+
+State 117 file autoPC.cpp line 73 function main thread 0
+----------------------------------------------------
+  survstatbuf2[15l]=145 (10010001)
+
+State 118 file autoPC.cpp line 70 function main thread 0
+----------------------------------------------------
+  i=16 (00000000000000000000000000010000)
+
+State 123 file autoPC.cpp line 76 function main thread 0
+----------------------------------------------------
+  chnum=134 (10000110)
+
+State 124 file autoPC.cpp line 76 function main thread 0
+----------------------------------------------------
+  on_off=true (1)
+
+State 125 file autoPC.cpp line 17 function get_dmr_status thread 0
+----------------------------------------------------
+  mask=0 (00000000)
+
+State 126 file autoPC.cpp line 17 function get_dmr_status thread 0
+----------------------------------------------------
+  mask=1 (00000001)
+
+State 127 file autoPC.cpp line 18 function get_dmr_status thread 0
+----------------------------------------------------
+  output=false (0)
+
+State 128 file autoPC.cpp line 18 function get_dmr_status thread 0
+----------------------------------------------------
+  output_undef=false (0)
+
+State 129 file autoPC.cpp line 18 function get_dmr_status thread 0
+----------------------------------------------------
+  output_undef=false (0)
+
+State 130 file autoPC.cpp line 18 function get_dmr_status thread 0
+----------------------------------------------------
+  ret=false (0)
+
+State 131 file autoPC.cpp line 19 function get_dmr_status thread 0
+----------------------------------------------------
+  bit=0 (00000000000000000000000000000000)
+
+State 132 file autoPC.cpp line 19 function get_dmr_status thread 0
+----------------------------------------------------
+  bit=6 (00000000000000000000000000000110)
+
+State 133 file autoPC.cpp line 19 function get_dmr_status thread 0
+----------------------------------------------------
+  byte=0 (00000000000000000000000000000000)
+
+State 134 file autoPC.cpp line 19 function get_dmr_status thread 0
+----------------------------------------------------
+  byte=16 (00000000000000000000000000010000)
+
+State 135 file autoPC.cpp line 20 function get_dmr_status thread 0
+----------------------------------------------------
+  mask=64 (01000000)
+
+Violated property:
+  file autoPC.cpp line 31 function get_dmr_status
+  array `survstatbuf' upper bound
+  (signed long int)byte < 16l
+
+VERIFICATION FAILED

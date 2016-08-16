@@ -1,0 +1,7 @@
+
+int x, y;
+assume(x == 2);
+assume(y == 2);
+assert((3*x+2*y) == (x+y));
+
+

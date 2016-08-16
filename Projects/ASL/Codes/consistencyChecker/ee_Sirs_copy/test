@@ -1,0 +1,7 @@
+# Calculate PPF return
+premium = 70000;
+interest_rate = 8 / 100;
+tenure = 60 - 33;
+ppf_return = premium * tenure + 
+             premium * interest_rate * (tenure * (tenure + 1) / 2);
+ppf_return;

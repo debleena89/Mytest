@@ -1,0 +1,212 @@
+\section{Introduction}
+Software Verification has become a must necessary step of Software engineering.
+All we need to have a code that is bug free. Now what is a bug ? when a code 
+gives unwanted result we can say that there is a bug in the code for which we 
+are not getting desired result. How can we detect that there is a bug in the 
+code.During the Software development life cycle after development of the code
+the code undergoes testing phase.That basically validates the code for some 
+input set. But it is not possible to test all input set for a particular code.
+Let us consider the following 
+code:--
+
+\begin{verbatim}
+void main()
+{
+  int x, y;  
+  
+  assert((x-y>0) == (x>y));
+     
+}
+\end{verbatim}
+
+In the above code we are concluding that if the difference of any two integer
+number be greater than 0 then subtrahend is greater than the minuend. While 
+testing this small code we will take some integer value and check but it is 
+very unlikely that we can consider x = 1935052801 and Y = -229208062, for this
+condition our conclusion is not correct. Software Validation does not guarantee
+bug free code. Because Exhaustive testing is not possible by this traditional 
+methods. 
+
+Now-a-days it is considered that if a code goes through exhaustive testing that
+is for all possible inputs (that can be the total range of the data type) and
+for each case it gives correct result (gives result according to the specification) 
+then only it is said bug free code. This is the aim of Formal Verification.
+
+Software Verification gives sounds result but is undecidable. That is if it says 
+that a code is correct then there cannot be any bug in that code as it checks for 
+all possible inputs. But for undecidable problems Formal verification cannot give
+correct result in a finite amount of time. It can find bug up to a definite range.
+Bugs that are beyond that range are not found. 
+
+\section {Bounded Program Analysis}
+
+An execution path consists of sequence of instructions executed during a single 
+run of the program. The states observed along the execution path are called 
+trace. For different inputs many such different traces can be there in the 
+program. We can represent each path with formula: for particular inputs 
+assignments along that trace will be satisfied. These formula are called 
+symbolic simulation.The useful application of symbolic simulatioon can be
+automatic test generation, detection of dead code and verification of asserted
+ properties.
+
+with a view to avoiding undecidability, we can impose bounds on the loops.Thus 
+we can restrict the unwinding of the loop upto our desirable depth. Then we can
+construct a logical formula that gives a clear picture of the relationship 
+between input and putput varables. Here comes static single assignment that is
+a variable with time stamp that signifies a variable used once in the code
+and says the value of that variable at that particular time.\\
+
+let us consider an example of loop, calculation of factorial of a number:--
+
+\noindent
+
+1 void factorial ( int n )\\
+
+2 \{\\
+
+3 int i = 1;\\
+
+4 int product = 1;\\
+
+5 while ( i <= n )\\
+
+6 \{\\
+
+7 product = product * i;\\
+
+8 i = i + 1;\\
+
+9 \}\\
+
+10 \}\\
+
+The following table shows the sequence of instruction that comes through the
+execution of the above code. It has 3 Columns, First Column says the line 
+number, second Column says the type of the instruction and the third Column
+shows the instruction or condition:--
+
+\begin{center}
+
+\begin{tabular}{|| c | c | c ||}
+
+\hline
+
+Line No. & Type & statement or condition \\ [0.5ex]
+
+\hline
+
+3 & assignment & i = 1; \\
+
+
+4 & assignment & product = 1; \\
+
+
+5 & branch & i $<$ n; \\
+
+7 & assignment & product = product * i; \\
+
+
+8 & assignment & i = i + 1; \\ [1ex]
+
+\hline
+
+\end{tabular}
+
+\end{center}
+
+\noindent
+
+The above statements can be represented using single static assignment in the
+following way.
+
+For this we are considering that n = 2.
+
+\begin{center}
+
+\begin{tabular}{|| c | c | c ||}
+
+\hline
+
+Line No. & Type & statement or condition \\ [0.5ex]
+
+\hline
+
+3 & assignment & $ i_0 = 1; $ \\
+
+
+4 & assignment & $ product_0 = 1; $ \\
+
+
+5 & branch & $ i_0 $ $<$ $ n ;$ \\
+
+7 & assignment & $product_1 = product_0 * i_0; $ \\
+
+
+8 & assignment & $ i_1 $ $=$ $ i_0 + 1; $ \\
+
+5 & branch & $ i_1 $ $<$ $ n ;$ \\
+
+7 & assignment & $product_2 = product_1 * i_1; $ \\
+
+
+8 & assignment & $ i_2 $ $=$ $ i_1 + 1; $ \\
+
+5 & branch & $ i_2 $ $<$ $ n ;$ \\ [1ex]
+
+\hline
+
+\end{tabular}
+
+\end{center}
+
+In the above table assignments are written using single static assignment. When
+i is first used in line number 3, it is denoted as $ i_0 $. From line 3 to 7 of
+the code the value remain same. In line number 8 the value of i is incremented 
+to 1. now this new value of i is assigned in $ i_1 $. So it is called static 
+single assignment where each variable will be assigned only once.
+
+This SSA form is now translated into a logical formula called the \textbf{path constraint}.
+The formula is shown below
+ssa $\Longleftrightarrow$ $ i_0 = 1; $                        $\wedge $ \\
+                          $ product_0 = 1; $                  $\wedge $ \\
+                          $ i_0 $ $<$ $ n ;$                  $\wedge $ \\
+                          $product_1 = product_0 * i_0; $     $\wedge $ \\
+                          $ i_1 $ $=$ $ i_0 + 1; $            $\wedge $ \\
+                          $ i_1 $ $<$ $ n ;$                  $\wedge $ \\
+                          $product_2 = product_1 * i_1; $     $\wedge $  \\
+                          $ i_2 $ $=$ $ i_1 + 1; $            $\wedge $ \\ 
+                          $ i_2 $ $<$ $ n ;$                  $\wedge $ \\
+                          
+\section {Assertion }
+
+While we write a program we want to perform some functionality. We can consider
+that a big task or function is an integration of small task. If these small 
+small tasks can be handled successfully then the big task can be solved 
+confidently. These small tasks or situation can be checked using Assertion.
+
+If we could handle that situation properly in the code and we invoke assertions
+for that situation it will pass that means we handled that situation properly 
+otherwise the assertion will fail. In case assertion, each run of the code is 
+explored to check whether the properties hold or not.
+
+For example , Let us consider the following assert:
+ \begin{verbatim}
+  int a, b;
+  assume(a = 6);
+  assert(b < a);
+ \end{verbatim}
+
+ The above written assertions are valid Because as the range of b is not specified
+ it can be any number less than 6. But consider the following assertion :
+ 
+ \begin{verbatim}
+  int a, b;
+  assume(a = 6);
+  assume(b > 10);
+  assert(a > b);
+ \end{verbatim}
+
+ This assertion is not satisfiable as b cannot be greater than 10 and less than 6
+ at the same time. 
+ 
+

@@ -1,0 +1,525 @@
+
+\chapter{Introduction}
+
+{\em What is formal property verification?} There are two ways in which English
+allows us to interpret the term {\em formal property verification}, namely:
+\begin{itemize}
+
+\item {\em Verification of formal properties}, or
+\item {\em Formal methods for property verification}
+
+\end{itemize}
+Formal property verification relates to both of these interpretations. On the
+other hand, design specifications in English are not always so generous -- 
+it is very rare to have a specification that can be interpreted in more than
+one way and both interpretations are acceptable. In an era where bugs are more
+costly than transistors, the industry is beginning to realize the value of 
+using formal specifications.
+
+Property verification is taking shape in two different forms within the design
+validation framework. These are {\em Formal Property Verification (FPV)} and
+{\em Assertion-based Verification (ABV)}. In both forms, formal properties 
+specify the correctness requirements of the design, and the goal is to check 
+whether a given implementation satisfies the properties. FPV techniques 
+formally verify whether {\em all} possible behaviors of the design satisfy the 
+given properties. ABV is a simulation-based approach, where the properties are 
+checked over a simulation run -- the verification is thereby confined to only 
+those behaviors that are encountered during the simulation. FPV is often
+refered to as {\em static property verification}, while ABV is synonymous
+with {\em dynamic property verification}. 
+
+The main tasks for a practitioner of property verification are as follows:
+\begin{enumerate}
+
+\item Development of the formal property specification. The main challenge
+	here is to express key features of the design intent in terms of
+	formal properties.
+
+\item Verifying the consistency and completeness of the specification. This
+	is a necessary step, because the first task is a non-trivial one and 
+	subject to errors and oversights.
+
+\item Verifying the implementation against the formal property specification.
+	In order to perform this task effectively, a validation engineer must
+	be aware of the limitations of the validation tool and must know
+	the best way to use the tool under various types of constraints.
+
+\end{enumerate}
+All the above tasks are replete with open issues -- the focus of this book is 
+to consider some of these issues and attempt to forecast the roadmap for FPV 
+and ABV within the existing design validation flows of chip design companies.
+This chapter will summarize some of the major challenges. Let us use the
+following case as a running example for our discussion.
+
+\begin{example} \label{ex1}
+{\em
+Let us consider the specification of a 2-way priority arbiter having the 
+following interface:
+\begin{tabbing}
+aa \= aa \= aa \= \kill
+\> mem-arbiter( input $r_1$, $r_2$, $clk$, non-input $g_1$, $g_2$ )
+\end{tabbing}
+$r_1$ and $r_2$ are the request lines, $g_1$ and $g_2$ are the corresponding
+grant lines, and $clk$ is the clock on which the arbiter samples its inputs
+and performs the arbitration. We assume that the arbitration decision for the
+inputs at one cycle is reflected by the status of the grant lines in the
+next cycle. Let us suppose that the specification of the arbiter contains 
+the following requirements:
+\begin{enumerate}
+
+\item Request line $r_1$ has higher priority than request line $r_2$. Whenever
+	$r_1$ goes high, the grant line $g_1$ must be asserted for the
+	next two cycles.
+
+\item When none of the request lines are high, the arbiter parks the grant
+	on $g_2$ in the next cycle.
+
+\item The grant lines, $g_1$ and $g_2$, are mutually exclusive.
+
+\end{enumerate}
+It is difficult to locate a book on formal verification that does not have
+an arbiter example - we hereby follow the tradition!
+} $\Box$
+\end{example}
+
+\section{Writing Our First Formal Specification}
+The first task in all forms of property verification is the development of
+the formal specification. This is a non-trivial task and typically done by
+a few specialized validation engineers today. The availability of several
+different languages for property specification and relatively few tools that
+support these languages adds another dimension to the complexity of this task.
+
+In recent times there has been a concerted effort at various forums to 
+unify and standardize the syntax and semantics of property specification 
+languages. In spite of this effort, there are still several competing
+languages, including Sugar/PSL of IBM/Acellera, System Verilog Assertions (SVA)
+of Accelera, Forspec of Intel and Open Vera Assertions (OVA) of Synopsys.
+Fortunately, the industry appears to be moving towards unifying these
+languages and adopting a mutually acceptable form.
+
+{\em What is in these languages that was not there in earlier languages for
+specifying constraints?} The main feature of these languages, which makes 
+them useful in practice for design verification, is the ability to describe
+sequences of events over time. 
+The property specification languages derive their formalism from few specific
+types of logics called {\em temporal logics}. Temporal logics are extensions
+of propositional logic, where in addition to the familiar Boolean operators
+(AND, OR, and NOT) we have {\em temporal operators} that allow us to specify
+constraints on the truth of the propositions over time. In other words,
+temporal logics allow us to specify properties that describe the behavior of
+a circuit over time, across cycle boundaries.
+
+To get a first-cut workable understanding of temporal logics, let us consider
+some of the basic temporal operators and their meaning. The operators are
+interpreted over a state machine -- the purpose of verification is to interpret
+the properties over the state machine representation of the design
+implementation. The details on temporal operators and property specification
+languages are given in Chapter~\ref{chap2}. We use illustrative examples
+here to demonstrate their use. The basic set of temporal operators in
+{\em Linear Temporal Logic} (LTL) are:
+\begin{description}
+
+\item[$X$: {\em The next-time operator}] The property, $X\varphi$, is true
+	at a state if $\varphi$ 
+	is true in the next cycle, where $\varphi$ may be another temporal 
+	property or a Boolean property over the state bits. $X\varphi$ is 
+	sometimes read as {\em "next f"}, and the operator $X$ is called 
+	the {\em next-time operator}.
+
+\item[$F$: {\em The future operator}] The property, $F\varphi$, is true at a
+	state if $\varphi$ is true {\em sometime} in the future.
+
+\item[$G$: {\em The global operator}] The property, $G\varphi$, is true at a
+	state if $\varphi$ is true {\em always} in future.
+
+\item[$U$: {\em The until operator}] The property, $\varphi\ U\ \psi$ is
+	true at a state if $\psi$ is true at some future state, $t$, and 
+	$\varphi$ is true at all states leading upto $t$.
+
+\end{description}
+The operators $X$ and $U$ are the only fundamental temporal operators -- $F$ 
+and $G$ can be derived from combinations of $U$ and Boolean operators.
+
+\begin{example} \label{ex2}
+{\em 
+Let us attempt to encode the properties described in Example~\ref{ex1} using
+LTL. Let us recall the properties:
+\begin{enumerate}
+
+\item Request line $r_1$ has higher priority than request line $r_2$. Whenever
+        $r_1$ goes high, the grant line $g_1$ must be asserted for the
+        next two cycles.
+
+\item When none of the request lines are high, the arbiter parks the grant
+        on $g_2$ in the next cycle.
+
+\item The grant lines, $g_1$ and $g_2$, are mutually exclusive.
+
+\end{enumerate}
+The first property may be written as:
+\[ G[\ r_1 \Rightarrow\  Xg_1\ \land\  XXg_1\ ] \]
+The subformula $r_1 \Rightarrow\  Xg_1\ \land\  XXg_1$ says: {\em If $r_1$
+is high in some state, then $g_1$ must be true in the next cycle and $g_1$
+must be true in the next to next cycle}. The $G$ operator says that the
+above subformula must hold on all states. This does not mean that $r_1$
+has to be true in all states -- those states where $r_1$ is low satisfy the
+implication {\em vacuously}.
+
+The second property can be written as:
+\[ G[\ \neg r_1\ \land\ \neg r_2\ \Rightarrow\  Xg_2\ ] \]
+The meaning of this property is exactly as before -- {\em in every state,
+if both $r_1$ and $r_2$ are low, then $g_2$ must be high in the next cycle}.
+
+The third property can be written as:
+\[ G[\ \neg g_1\ \lor\ \neg g_2\ ] \]
+This property says: {\em always at least one among $g_1$ and $g_2$ must be
+low}, which expresses the mutual exclusion requirement.
+} $\Box$
+\end{example}
+
+Having written our first formal specification, we are now in a position to
+look at some of the fundamental questions that cross the minds of a 
+practitioner of FPV. The answers to these questions form the major contents
+of this book.
+
+\section{Is my specification correct?}
+The first major challenge faced by every validation engineer who uses FPV is
+to ascertain whether the specification itself is correct. Functional
+correctness is very difficult to check since we do not have any formal
+reference against which we may perform this verification. However it is
+possible to check whether the specification is inherently consistent, or
+whether there are contradictions within the specification itself. This is
+a task of considerable importance, but EDA support is not yet adequate. 
+
+\begin{example} \label{ex3}
+{\em 
+Let us examine our first specification. {\em Is it consistent?} Let us examine
+the properties again.
+\begin{tabbing}
+aaaa \= aaaa \= \kill
+\> $G[\ r_1 \Rightarrow\  Xg_1\ \land\  XXg_1\ ]$ \\
+\> $G[\ \neg r_1\ \land\ \neg r_2\ \Rightarrow\  Xg_2\ ]$ \\
+\> $G[\ \neg g_1\ \lor\ \neg g_2\ ]$
+\end{tabbing}
+Let us consider the scenario, where $r_1$ is high at time $t$ and low at time
+$t+1$, and $r_2$ is low at both time steps. The first property requires 
+$g_1$ to be high at time $t+2$, where as the second property requires
+$g_2$ to be high at time $t+2$ because both $r_1$ and $r_2$ are low at
+$t+1$. The third property prevents both $g_1$ and $g_2$ to be asserted at
+time $t+2$, leading us to a contradiction. Hence we have an inconsistency
+in our first specification!
+} $\Box$
+\end{example}
+
+Detecting inconsistencies in specifications is a non-trivial task. It can
+be modeled as a game between the module and the environment, where the 
+module attempts to satisfy the specification by setting appropriate values
+to its outputs while the environment attempts to refute the specification
+by setting values to the input signals. This game alternates between the
+module and its environment over time -- the specification is inconsistent
+if the environment always has a winning strategy. Chapter~\ref{consistency}
+presents recent research on consistency checking methods for formal property
+specifications.
+
+Before we proceed further, let us remove the inconsistency from our first
+specification. The intent of the second property was to specify that $g_2$
+is the default grant. Another way to specify the same intent is:
+\[ G[\ \neg g_1\ \Rightarrow\  g_2\ ] \]
+This says that $g_2$ gets the grant whenever we are not committed to give the
+grant to $g_1$. Henceforth we will use this property in place of the second
+property in our specification.
+
+Let us see how this eliminates the problem. If $r_1$ is high at time $t$ and
+low at time $t+1$, then the first property requires $g_1$ to be true at time 
+$t+1$. If $g_1$ is true, then the above property is vacuously satisfied
+without requiring $g_2$ to be true, and hence there is no conflict.
+
+Inconsistencies are very common in design specifications. Writing the
+specifications in formal languages and performing consistency checks can
+locate some of the most complex inconsistencies in the specifications
+very early in the design flow, thereby saving a significant quantum of
+validation (and possible re-designing) effort.
+
+\section{Have I written enough properties?}
+The popular selling point for FPV is that it is {\em exhaustive} in nature.
+Since this guarantee requires the FPV tool to check all possible behaviors
+of the implementation, it is often misinterpreted as 100\% coverage. In
+reality FPV only guarantees that the given properties are verified over all
+possible behaviors of the implementation -- it has no way of verifying
+any feature that has not been expressed in terms of properties.
+
+One of the main challenges of a validation engineer is to make sure that
+the formal property specification covers all the correctness requirements
+of the design. To check the extent of this coverage, we need to compare the 
+set of formal properties with a reference which formally expresses the
+complete set of correctness requirements. This is an instance of the
+chicken-and-egg problem, since the reference itself could be used as the
+formal specification.
+
+It is for this reason that FPV coverage metrics are typically {\em structural}
+in nature. In other words, since the property suite represents the first 
+formal functional specification of the design, we do not have any functional
+reference to compare it with, and therefore we resort to structural coverage.
+The objective of these structural metrics is to expose gross gaps in the
+specification. Typically a low value of these metrics indicate that more
+properties need to be added, but a high value does not necessarily mean that
+we have high functional coverage. This follows from the fact that low
+structural coverage almost always means low functional coverage, but the
+reverse is not always the case.
+
+Most of the existing FPV coverage metrics use a given implementation as the
+reference for coverage analysis. Chapter~\ref{completeness} outlines some
+of these metrics. We also present a new style of FPV coverage analysis which
+is based on the following criticism of existing FPV coverage metrics.
+\begin{enumerate}
+
+\item If the reference is an implementation, then the coverage of a property
+	suite will change with the implementation. An incomplete implementation
+	may give a false sense of high coverage.
+
+\item We believe that the future of FPV lies in a validation flow, where the
+	properties will be written with the specification document at a time
+	when implementation is yet to begin. At that stage we need to analyze
+	the completeness of the specification in the absence of any reference
+	implementation.
+
+\item Existing coverage metrics have the same evaluation complexity as
+	model checking. Therefore coverage analysis runs into the same
+	capacity issues as model checking.
+
+\end{enumerate}
+Our style of coverage analysis compares the property suite against a fault
+model. Intuitively, if there is any input or non-input signal of the
+design-under-test which is a {\em don't care} with respect to every property
+in the suite, then there is a coverage gap since we did not specify any
+behavior involving that signal. The details of this new approach is 
+presented in Chapter~\ref{completeness}. 
+
+\begin{example} \label{ex4}
+{\em
+Let us again consider our first specification after the modifications in the
+last section.
+\begin{tabbing}
+aaaa \= aaaa \= \kill
+\> $G[\ r_1 \Rightarrow\  Xg_1\ \land\  XXg_1\ ]$ \\
+\> $G[\ \neg g_1\ \Rightarrow\  g_2\ ]$\\
+\> $G[\ \neg g_1\ \lor\ \neg g_2\ ]$
+\end{tabbing}
+Does this specification cover any behavior where $g_1$ is required to be high?
+The answer is yes, the witness being the first property. But does it ever
+enforce $g_2$ to be high? The answer is no!
+
+This has a serious implication. Consider an implementation that never asserts
+$g_2$, and always asserts $g_1$ regardless of the inputs. None of our
+properties will be refuted by this implementation and we will be led to
+believe that the implementation is correct. Our analysis will point out
+that we need to add properties that specify those behaviors where $g_2$
+is forced to be high.
+
+Let us add the following property into our specification:
+\[ G[\ \neg r_1\ \land\  X\neg r_1\ \Rightarrow\ XX\neg g_1\ ] \]
+Adding this property eliminates the problem. It guarantees that $g_1$ is never
+asserted except in those cases covered by the first property. The second
+property forces $g_2$ to be high by default.
+
+Let us now look at the input signals. Do we need to read $r_1$ at all? The
+answer is yes. Suppose both $g_1$ and $r_2$ are low at time $t$. If $r_1$
+is high, the arbiter must assert $g_1$ in the next cycle (by the first
+property). On the other hand, if $r_1$ is low, then the aribiter must
+not assert $g_1$ in the next cycle (by the new property). Therefore it cannot
+satisfy the specification without reading $r_1$.
+
+Can we satisfy the specification without reading $r_2$? The answer is yes!
+The specification is free from $r_2$. This is another form of gap which 
+points out the necessity to add properties that cover those cases where
+the value of $r_2$ must be considered for setting the correct outputs.
+Without complicating matters any further, let us accept the fact that in our
+arbiter specification, $r_2$ is indeed redundant!
+} $\Box$
+\end{example}
+
+We are now ready with a consistent and (hopefully) complete specification
+of our arbiter. The next step is to use this specification to verify the
+design implementation.
+
+\section{How can I check the properties?}
+Having written our first formal specification, we are now faced with the
+option of using one of the two broad methodologies for property verification,
+namely {\em Assertion Based Verification} (ABV) and {\em Formal Property
+Verification} (FPV). Let us study the ABV approach first.
+
+\subsection{The ABV approach}
+In the ABV approach, we must first write a test bench to drive inputs into
+our implementation. The complexity of this task grows rapidly with the
+complexity of the design. This is because the environment of a module is
+typically constrained by the behavior of the other modules in the design
+and by the protocol used for their communication. For example, to verify
+an endpoint device in a PCI Express architecture, the test bench must model
+the rest of the architecture consisting of other endpoints, the switches and
+the root complex. Even after this is done, it is not practically feasible
+to write directed tests to sensitize all possible behaviors of this model.
+
+The ABV setup is shown in Fig~\ref{fig1.2}. We simulate the implementation
+with the test bench. The assertion checker reads the signals in the interface
+and monitors the status of the properties. If any of the properties fail
+during the simulation, the checker reports it immediately. The failure points
+help the validation engineer to isolate the source of the bug.
+
+There are two key features of ABV which explains the remarkable growth
+in the penetration of this technology. Firstly, it is built over the
+traditional simulation framework and requires nominal additional effort
+from the validation engineer. Secondly, it does not have any major capacity
+concerns, since the verification is done over the simulation run.
+
+The main criticism of the ABV approach is that only those behaviors that
+are covered by simulation are examined for property violation. The following
+example demonstrates this problem on our arbiter.
+
+\begin{example}
+{\em 
+The implementation of our arbiter is shown in Fig~\ref{fig1.1}. The boxes
+represent flip-flops. The gates have their usual meanings. The same clock
+(not shown) drives both flops. The verification problem is to determine
+whether this implementation satisfies our formal specification. The
+Verilog for the implementation is also shown.
+
+Fig~\ref{fig1.3} shows a sample test bench for our arbiter. The test
+bench has two processes - one generates a pattern of requests for $r_1$,
+the other generates a pattern of requests for $r_2$. Recent test
+bench modeling languages such as Vera and System Verilog (task blocks)
+allow us to write such concurrent test benches.
+
+The implementation of our arbiter has a bug. Consider the case when both
+requests are low for two consecutive cycles. The specification demands that
+the grant be parked on $g_2$ (by default), but in our implementation both
+grants will be low. Though the specification guards against the error, the
+bug will escape detection because our test bench never creates the relevant
+cases.
+} $\Box$
+\end{example}
+
+The example brings out one of the major challenges in property verification.
+In view of the volume of directed tests that needs to be written in order to
+achieve a meaningful level of functional coverage, the industry is moving
+towards coverage driven randomized test generation. This helps in reaching
+a high level of coverage in short time, but the difficult corner case
+behaviors are typically left out. Formal properties target these
+corner case behaviors, but ABV is not effective unless we can force the
+test bench to create the relevant scenarios.
+
+The task of manually deriving the tests that cover the scenarios that are
+relevant to a formal property is a very complex one, even for the seasoned
+practitioner of ABV. We therefore require automated formal methods that
+can analyze a property and spin out the tests that trigger those properties.
+Chapter~\ref{testgeneration} outlines some recent research on this topic.
+
+\subsection{The FPV approach}
+The FPV setup is shown in Fig~\ref{fig1.4}. At the heart of this approach we
+have a {\em model checking} tool. A model checking algorithm has two main
+inputs -- a formal property and a finite state machine representing the
+implementation. The role of the algorithm is to search all possible paths
+of the state machine for a path which refutes one or more properties. If one
+exists, then the path trace is reported as the counter-example. Otherwise
+the model checker asserts that the property holds on the implementation.
+
+\begin{example}
+{\em 
+Let us again consider the implementation of our arbiter shown in 
+Fig~\ref{fig1.1}. The state machine for the arbiter is shown in
+Fig~\ref{fig1.5}. It may be noted that the input bits are also part of the
+state of the arbiter. The intrinsic next state of the arbiter is a function
+of the present state and present inputs, but since the inputs arriving in the
+next cycle are not known a priori, the state machine is non-deterministic
+in nature.
+
+The objective of model checking is to search for a path in this state machine
+that refutes one or more properties from our specification. Indeed one such
+path is the path .... which refutes the property:
+\[ G[\ \neg g_1\ \Rightarrow\  g_2\ ] \]
+The model checker will find the refuting path. Since the path also contains
+the input sequence for which the refutation occurs, it produces a complete
+counter-example trace with the appropriate inputs that trigger the incorrect 
+behavior of the module.
+} $\Box$
+\end{example}
+
+We outline some of the popular model checking approaches in 
+Chapter~\ref{chap2}. The interested reader may refer to \cite{clarke:00}
+for details on model checking methods.
+
+The main limitation of model checking technology is in capacity. There is a
+popular misconception in this context -- validation engineers not conversant
+with the model checking algorithms often tend to believe that the core model
+checking algorithms suffer from capacity bottlenecks. This is not the case.
+For example, the complexities of both CTL and LTL model checking are linear
+in the size of the state space. CTL model checking is also linear in the size
+of the property. LTL model checking algorithms are exponential in the size
+of the properties, but there is not much of a capacity issue here, since 
+typical properties written by validation engineers are small in size.
+
+The main capacity bottleneck in model checking tools is in representing the
+state machine that needs to be extracted from the RTL. The number of states
+in the machine typically grows exponentially with the number of concurrent
+components. For designs of moderate size this leads to state explosion.
+
+Most of the recent research in formal property verification has been on
+developing engineering solutions to the state explosion problem. Some of the
+notable approaches are:
+\begin{enumerate}
+
+\item {\em BDD-based approaches.} Several model checking tools use {\em binary
+	decision diagrams} to represent the state transition relation
+	succinctly. Typically the size of BDDs tend to grow alarmingly
+	after about 200 variables -- hence BDD based approaches face capacity
+	problems on state machines having more than 100 state bits.
+
+\item {\em Bounded model checking.} Often the validation engineer expects
+	a property to pass or fail within some definite number of cycles.
+	BMC based tools accept a bound on the expected length of a 
+	counter-example (if one exists) and unfold the property and the
+	state machine upto the given bound. The clauses generated by this
+	unfolding are fed into a Boolean SAT solver and the result indicates
+	the truth of the property up to the given bound. Since recent SAT
+	solvers are able to handle millions of clauses, BMC can handle
+	larger designs -- but the limitation is that we need to know the
+	bound on the length of counter-examples. The bound can be iteratively
+	increased, but the complexity of the SAT instances grow with the
+	increase in the bound.
+
+\item {\em Abstractions and Approximate Model Checking.} Often the {\em cone of
+	influence} of a property covers only a fraction of the design. Some
+	of the components of the design may not affect the truth of a property.
+	In such cases it is possible to abstract out the relevant components
+	and check the property on the reduced state machine. We may also
+	abstract out the components that directly relate to the property
+	and attempt to prove that the property holds in the reduced machine
+	under the assumption that the inputs received from the other 
+	components can be arbitrary. If the property holds under this 
+	assumption, then obviously it holds on the given design. The reverse
+	is not true, since the inputs under which the property fails may not
+	be asserted by the other components. Hence such methods are referred
+	to as {\em approximate model checking} methods.
+
+\item {\em Assume-guarantee Verification.} 
+
+ In order to find
+such a path, model checking algorithms typically use a three step approach.
+In the first step, we create the negation of the properties in the 
+specification.
+
+\section{Can I check all properties?}
+
+\section{What have I verified?}
+
+
+\section{Formal Property Verification}
+Follow example.
+
+\section{Assertion Based Verification}
+Follow example.
+
+\section{Major Challenges}
+
+\section{The Roadmap}
+
+\section{Book Structure}

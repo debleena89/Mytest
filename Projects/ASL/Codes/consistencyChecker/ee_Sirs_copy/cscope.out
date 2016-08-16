@@ -1,0 +1,2218 @@
+cscope 15 $HOME/Projects/ee -c               0000011745
+	@main/main.cpp
+
+1 #include 
+	~<iostream
+>
+
+2 #include 
+	~<cstdio
+>
+
+3 
+using
+ 
+namespace
+ 
+	gstd
+;
+
+5 extern 
+FILE
+ *
+yyin
+;
+
+6 int 
+yyparse
+();
+
+7 void 
+yyfinalize
+();
+
+9 int 
+	$parse
+(const char *
+path
+ = 
+NULL
+)
+
+11 if (
+path
+ == 
+NULL
+)
+
+12 
+yyin
+ = 
+stdin
+;
+
+14 
+yyin
+ = 
+	`fopen
+(
+path
+, "r");
+
+15 if (
+yyin
+ == 
+NULL
+)
+
+17 
+cout
+ << "Error: Can't open file " << 
+path
+ << " ..." << 
+endl
+;
+
+20 if (
+	`yyparse
+() != 0)
+
+22 
+	`yyfinalize
+();
+
+23 
+	`fclose
+(
+yyin
+);
+
+25 
+	}
+}
+
+27 int 
+	$main
+(int 
+argc
+, char **
+argv
+)
+
+29 if (
+argc
+ == 1)
+
+30 return 
+	`parse
+();
+
+31 for (int 
+i
+ = 1; i < 
+argc
+; i++)
+
+33 if (
+	`parse
+(
+argv
+[
+i
+]) != 0)
+
+37 
+	}
+}
+
+	@om/eeBinaryExpr.cpp
+
+1 #include 
+	~"eeBinaryExpr.h
+"
+
+3 
+	geeBinaryExpr
+::
+	$eeBinaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+ *
+expr1
+,
+
+4 
+eeExpr
+ *
+expr2
+): 
+	`_operator
+(
+op
+),
+
+5 
+	`_operand1
+(
+expr1
+), 
+	$_operand2
+(
+expr2
+)
+
+6 {
+	}
+}
+
+8 
+	geeBinaryExpr
+::~
+	$eeBinaryExpr
+()
+
+10 
+delete
+ 
+_operand1
+;
+
+11 
+delete
+ 
+_operand2
+;
+
+12 
+	}
+}
+
+14 double 
+	geeBinaryExpr
+::
+	$evaluate
+() const
+
+16 double 
+value
+;
+
+17 switch (
+_operator
+)
+
+19 case 
+EEOP_PLUS
+:
+
+21 
+value
+ = 
+_operand1
+->
+	`evaluate
+() + 
+_operand2
+->evaluate();
+
+24 case 
+EEOP_MINUS
+:
+
+26 
+value
+ = 
+_operand1
+->
+	`evaluate
+() - 
+_operand2
+->evaluate();
+
+29 case 
+EEOP_MUL
+:
+
+31 
+value
+ = 
+_operand1
+->
+	`evaluate
+() * 
+_operand2
+->evaluate();
+
+34 case 
+EEOP_DIV
+:
+
+36 
+value
+ = 
+_operand1
+->
+	`evaluate
+() / 
+_operand2
+->evaluate();
+
+39 case 
+EEOP_EQ
+:
+
+41 
+value
+ = (
+_operand1
+->
+	`evaluate
+() == 
+_operand2
+->evaluate());
+
+44 case 
+EEOP_NE
+:
+
+46 
+value
+ = (
+_operand1
+->
+	`evaluate
+() != 
+_operand2
+->evaluate());
+
+49 default: 
+	`assert
+(0);
+
+51 return 
+value
+;
+
+52 
+	}
+}
+
+54 void 
+	geeBinaryExpr
+::
+	$decompile
+(
+ostream
+ &
+os
+) const
+
+56 
+os
+ << '(' << 
+_operand1
+ << ' ' << 
+_operator
+ << ' ' << 
+_operand2
+ << ')';
+
+57 
+	}
+}
+
+	@om/eeBinaryExpr.h
+
+1 #ifndef 
+BINARY_EXPR_H
+
+
+2 #define 
+	#BINARY_EXPR_H
+
+
+	)
+
+4 #include 
+	~"eeExpr.h
+"
+
+6 class 
+	ceeBinaryExpr
+: 
+public
+ 
+eeExpr
+
+
+8 
+private
+:
+
+9 
+eeOperator
+ 
+_operator
+;
+
+10 
+eeExpr
+ *
+	m_operand1
+;
+
+11 
+eeExpr
+ *
+	m_operand2
+;
+
+13 
+	mpublic
+:
+
+14 
+eeBinaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+* 
+expr1
+, eeExpr *
+expr2
+);
+
+15 ~
+eeBinaryExpr
+();
+
+17 double 
+	$evaluate
+() const;
+
+18 void 
+	$decompile
+(
+ostream
+ &
+os
+) const;
+
+	@om/eeConstExpr.cpp
+
+1 #include
+	~"eeConstExpr.h
+"
+
+3 
+	geeConstExpr
+::
+	$eeConstExpr
+(double 
+value
+): 
+	$_value
+(
+value
+)
+
+4 {
+	}
+}
+
+6 double 
+eeConstExpr
+::
+	$evaluate
+() const
+
+8 return 
+_value
+;
+
+9 
+	}
+}
+
+11 void 
+	geeConstExpr
+::
+	$decompile
+(
+ostream
+ &
+os
+) const
+
+13 
+os
+ << 
+fixed
+ << 
+_value
+;
+
+14 
+	}
+}
+
+	@om/eeConstExpr.h
+
+1 #ifndef 
+CONST_EXPR_H
+
+
+2 #define 
+	#CONST_EXPR_H
+
+
+	)
+
+3 #include 
+	~"eeExpr.h
+"
+
+5 class 
+	ceeConstExpr
+: 
+public
+ 
+eeExpr
+
+
+7 
+private
+:
+
+8 const double 
+_value
+;
+
+10 
+	mpublic
+:
+
+11 
+eeConstExpr
+(double 
+value
+);
+
+12 ~
+	$eeConstExpr
+() {}
+
+14 double 
+	$evaluate
+() const ;
+
+15 void 
+	$decompile
+(
+ostream
+ &
+os
+) const;
+
+16 
+	}
+};
+
+	@om/eeDefines.h
+
+1 #ifndef 
+DEFINES_H
+
+
+2 #define 
+	#DEFINES_H
+
+
+	)
+
+4 #include 
+	~<iostream
+>
+
+5 #include 
+	~<string
+>
+
+6 #include 
+	~<cassert
+>
+
+8 
+using
+ 
+namespace
+ 
+	gstd
+;
+
+10 enum 
+	eeeOperator
+ {
+
+11 
+	mEEOP_UPLUS
+,
+
+12 
+	mEEOP_UMINUS
+,
+
+13 
+	mEEOP_PLUS
+,
+
+14 
+	mEEOP_MINUS
+,
+
+15 
+	mEEOP_MUL
+,
+
+16 
+	mEEOP_DIV
+,
+
+17 
+	mEEOP_EQ
+,
+
+18 
+	mEEOP_NE
+,
+
+19 
+	mTERNOP
+
+
+	@om/eeExpr.cpp
+
+1 #include 
+	~"eeExpr.h
+"
+
+3 
+	gostream
+ &
+	goperator
+<<(ostream &
+	gos
+, 
+eeOperator
+ 
+	gop
+)
+
+5 switch(
+	gop
+)
+
+7 case 
+	gEEOP_PLUS
+:
+
+9 
+os
+ << '+';
+
+12 case 
+	gEEOP_MINUS
+:
+
+14 
+os
+ << '-';
+
+17 case 
+	gEEOP_MUL
+:
+
+19 
+os
+ << '*';
+
+22 case 
+	gEEOP_DIV
+:
+
+24 
+os
+ << '/';
+
+27 case 
+	gEEOP_UPLUS
+:
+
+29 
+os
+ << '+';
+
+32 case 
+	gEEOP_UMINUS
+:
+
+34 
+os
+ << '-';
+
+37 case 
+	gEEOP_EQ
+:
+
+39 
+os
+ << "==";
+
+42 case 
+	gEEOP_NE
+:
+
+44 
+os
+ << "!=";
+
+47 case 
+	gTERNOP
+:
+
+49 
+os
+ << '?' ;
+
+53 default: 
+assert
+(0);
+
+55 return 
+	gos
+;
+
+58 
+	gostream
+& 
+	goperator
+<<(ostream &
+	gos
+, 
+eeExpr
+ *
+	gexpr
+)
+
+60 
+	gexpr
+->
+decompile
+(
+os
+);
+
+61 return 
+	gos
+;
+
+	@om/eeExpr.h
+
+1 #ifndef 
+EXPR_H
+
+
+2 #define 
+	#EXPR_H
+
+
+	)
+
+4 #include 
+	~"eeDefines.h
+"
+
+6 class 
+	ceeExpr
+
+
+8 
+	mpublic
+:
+
+9 
+	$eeExpr
+() {}
+
+10 
+virtual
+ ~
+	$eeExpr
+() {
+	}
+}
+
+12 
+virtual
+ double 
+	$evaluate
+() const = 0;
+
+13 
+virtual
+ void 
+	$decompile
+(
+ostream
+ &
+os
+) const = 0;
+
+14 
+	}
+};
+
+16 
+	gostream
+ &
+	goperator
+<<(ostream &
+	gos
+, 
+eeOperator
+ 
+	gop
+);
+
+17 
+	gostream
+ &
+	goperator
+<<(ostream &
+	gos
+, 
+eeExpr
+ *
+	gexpr
+);
+
+	@om/eeNamedExpr.cpp
+
+1 #include
+	~"eeNamedExpr.h
+"
+
+3 
+	geeNamedExpr
+::
+	$eeNamedExpr
+(const 
+eeVar
+ *
+var
+): 
+	$_var
+(
+var
+)
+
+4 {
+	}
+}
+
+6 double 
+eeNamedExpr
+::
+	$evaluate
+() const
+
+8 return 
+_var
+->
+	`getValue
+();
+
+10 
+	}
+}
+
+12 void 
+	geeNamedExpr
+::
+	$decompile
+(
+ostream
+ &
+os
+) const
+
+14 
+os
+ << 
+_var
+->
+	`getName
+();
+
+15 
+	}
+}
+
+	@om/eeNamedExpr.h
+
+1 #ifndef 
+NAMEDEXPR_H
+
+
+2 #define 
+	#NAMEDEXPR_H
+
+
+	)
+
+4 #include 
+	~"eeExpr.h
+"
+
+5 #include 
+	~"eeVar.h
+"
+
+7 class 
+	ceeNamedExpr
+: 
+public
+ 
+eeExpr
+
+
+9 
+private
+:
+
+10 const 
+eeVar
+ *
+_var
+;
+
+12 
+	mpublic
+:
+
+13 
+eeNamedExpr
+(const 
+eeVar
+ *
+var
+);
+
+14 ~
+	$eeNamedExpr
+() {}
+
+16 double 
+	$evaluate
+() const;
+
+17 void 
+	$decompile
+(
+ostream
+ &
+os
+) const;
+
+18 
+	}
+};
+
+	@om/eeTernaryExpr.cpp
+
+1 #include 
+	~"eeTernaryExpr.h
+"
+
+3 
+	geeTernaryExpr
+::
+	$eeTernaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+ *
+expr1
+, eeExpr *
+expr2
+,
+
+4 
+eeExpr
+ *
+expr3
+): 
+	`_operator
+(
+op
+), 
+	`_operand1
+(
+expr1
+),
+
+5 
+	`_operand2
+(
+expr2
+), 
+	$_operand3
+(
+expr3
+)
+
+6 {
+	}
+}
+
+8 
+	geeTernaryExpr
+::~
+	$eeTernaryExpr
+()
+
+10 
+delete
+ 
+_operand1
+;
+
+11 
+delete
+ 
+_operand2
+;
+
+12 
+delete
+ 
+_operand3
+;
+
+13 
+	}
+}
+
+15 double 
+	geeTernaryExpr
+::
+	$evaluate
+() const
+
+17 double 
+value
+ ;
+
+18 switch (
+_operator
+)
+
+20 case 
+TERNOP
+:
+
+22 if(
+_operand1
+->
+	`evaluate
+() == 0)
+
+23 
+value
+ = 
+_operand3
+->
+	`evaluate
+();
+
+25 
+value
+ = 
+_operand2
+->
+	`evaluate
+();
+
+28 default: 
+	`assert
+(0);
+
+30 return 
+value
+;
+
+31 
+	}
+}
+
+33 void 
+	geeTernaryExpr
+::
+	$decompile
+(
+ostream
+ &
+os
+) const
+
+35 
+os
+ << 
+_operand1
+ << ' ' << 
+_operator
+ << ' ' << 
+_operand2
+ <<
+
+36 ' ' << ':' << ' ' << 
+_operand3
+;
+
+37 
+	}
+}
+
+	@om/eeTernaryExpr.h
+
+1 #ifndef 
+TERNARY_EXPR_H
+
+
+2 #define 
+	#TERNARY_EXPR_H
+
+
+	)
+
+4 #include 
+	~"eeExpr.h
+"
+
+6 class 
+	ceeTernaryExpr
+: 
+public
+ 
+eeExpr
+
+
+8 
+private
+:
+
+9 
+eeOperator
+ 
+_operator
+;
+
+10 
+eeExpr
+ *
+	m_operand1
+;
+
+11 
+eeExpr
+ *
+	m_operand2
+;
+
+12 
+eeExpr
+ *
+	m_operand3
+;
+
+14 
+	mpublic
+:
+
+15 
+eeTernaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+* 
+expr1
+, eeExpr *
+expr2
+,
+
+16 
+eeExpr
+ *
+expr3
+);
+
+17 ~
+eeTernaryExpr
+();
+
+19 double 
+	$evaluate
+() const;
+
+20 void 
+	$decompile
+(
+ostream
+ &
+os
+) const;
+
+	@om/eeUnaryExpr.cpp
+
+1 #include 
+	~"eeUnaryExpr.h
+"
+
+3 
+	geeUnaryExpr
+::
+	$eeUnaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+ *
+expr
+):
+
+4 
+	`_operator
+(
+op
+), 
+	$_operand
+(
+expr
+)
+
+5 {
+	}
+}
+
+7 
+	geeUnaryExpr
+::~
+	$eeUnaryExpr
+()
+
+9 
+delete
+ 
+_operand
+;
+
+10 
+	}
+}
+
+12 double 
+	geeUnaryExpr
+::
+	$evaluate
+() const
+
+14 double 
+value
+ = 
+_operand
+->
+	`evaluate
+();
+
+15 switch (
+_operator
+)
+
+17 case 
+EEOP_UPLUS
+:
+
+19 
+value
+ = + value;
+
+21 case 
+EEOP_UMINUS
+:
+
+23 
+value
+ = - value;
+
+25 default: 
+	`assert
+(0);
+
+27 return 
+value
+;
+
+28 
+	}
+}
+
+30 void 
+	geeUnaryExpr
+::
+	$decompile
+(
+ostream
+ &
+os
+) const
+
+32 
+os
+ << '(' << 
+_operator
+ << 
+_operand
+ << ')';
+
+33 
+	}
+}
+
+	@om/eeUnaryExpr.h
+
+1 #ifndef 
+UNARY_EXPR_H
+
+
+2 #define 
+	#UNARY_EXPR_H
+
+
+	)
+
+4 #include 
+	~"eeExpr.h
+"
+
+6 class 
+	ceeUnaryExpr
+: 
+public
+ 
+eeExpr
+
+
+8 
+private
+:
+
+9 
+eeOperator
+ 
+_operator
+;
+
+10 
+eeExpr
+ *
+	m_operand
+;
+
+12 
+	mpublic
+:
+
+13 
+eeUnaryExpr
+(
+eeOperator
+ 
+op
+, 
+eeExpr
+ *
+expr
+);
+
+14 ~
+eeUnaryExpr
+();
+
+16 double 
+	$evaluate
+() const;
+
+17 void 
+	$decompile
+(
+ostream
+ &
+os
+) const;
+
+	@om/eeVar.h
+
+1 #ifndef 
+VAR_H
+
+
+2 #define 
+	#VAR_H
+
+
+	)
+
+4 #include 
+	~"eeDefines.h
+"
+
+6 class 
+	ceeVar
+
+
+8 
+	mprivate
+:
+
+9 const 
+string
+ 
+_name
+;
+
+10 double 
+	m_value
+;
+
+12 
+	mpublic
+:
+
+13 
+	$eeVar
+(const 
+string
+ &
+name
+, double 
+value
+ = 0):
+
+14 
+	`_name
+(
+name
+), 
+	$_value
+(
+value
+)
+
+16 ~
+	$eeVar
+() {
+	}
+}
+
+18 
+string
+ 
+	$getName
+() const
+
+19 { return 
+_name
+; 
+	}
+}
+
+21 double 
+	$getValue
+() const
+
+22 { return 
+_value
+; 
+	}
+}
+
+24 void 
+	$setValue
+(double 
+value
+)
+
+25 { 
+_value
+ = 
+value
+; 
+	}
+}
+
+	@parser/eeLex.l
+
+3 #include 
+	~<stdlib.h
+>
+
+4 #include 
+	~<string.h
+>
+
+5 
+using
+ 
+namespace
+ 
+	gstd
+;
+
+7 #include 
+	~"eeExpr.h
+"
+
+8 #include 
+	~"eeYacc.hpp
+"
+
+10 void 
+yyerror
+(const char*);
+
+14 %% /* 
+	$yylex
+ */
+
+16 [
+a
+-
+zA
+-
+Z_
+][a-zA-
+Z0
+-9
+_
+]* {
+
+17 
+yylval
+.
+str
+ = (char*) 
+	`malloc
+(sizeof(char) * (
+	`strlen
+(
+yytext
+) + 1));
+
+18 
+	`strcpy
+(
+yylval
+.
+str
+, 
+yytext
+);
+
+19 return 
+ID
+;
+
+22 #.*\
+n
+ ;
+
+24 
+yylval
+.
+value
+ = 
+	`atof
+(
+yytext
+);
+
+25 return 
+NUMBER
+;
+
+28 "==" return 
+EQ
+;
+
+29 "!=" return 
+NE
+;
+
+32 return *
+yytext
+;
+
+35 [ \
+t
+] ;
+
+37 \
+n
+\
+r
+? 
+yylineno
+++;
+
+39 . return 
+ERROR
+;
+
+41 
+	}
+%%
+
+43 int 
+	$yywrap
+()
+
+46 
+	}
+}
+
+48 void 
+	$yyerror
+(const char *
+str
+)
+
+50 
+cout
+ << "Error[" << 
+yylineno
+ << "]: " << 
+str
+ << " ..." << 
+endl
+;
+
+51 
+	}
+}
+
+	@parser/eeYacc.y
+
+3 #include 
+	~<map
+>
+
+4 #include 
+	~<cstdlib
+>
+
+5 
+using
+ 
+namespace
+ 
+	gstd
+;
+
+7 #include 
+	~"eeDefines.h
+"
+
+8 #include 
+	~"eeVar.h
+"
+
+9 #include 
+	~"eeExpr.h
+"
+
+10 #include 
+	~"eeConstExpr.h
+"
+
+11 #include 
+	~"eeNamedExpr.h
+"
+
+12 #include 
+	~"eeUnaryExpr.h
+"
+
+13 #include 
+	~"eeBinaryExpr.h
+"
+
+14 #include 
+	~"eeTernaryExpr.h
+"
+
+16 int 
+yylex
+();
+
+17 void 
+yyerror
+(const char*);
+
+19 static 
+bool
+ 
+	gdebug
+ = 
+false
+;
+
+20 
+	gmap
+<
+	gstring
+, 
+	geeVar
+*> 
+	gvarSymTab
+;
+
+26 char *
+str
+;
+
+27 double 
+value
+;
+
+28 
+eeExpr
+ *
+expr
+;
+
+31 %
+token
+ <
+str
+> 
+ID
+
+
+32 %
+token
+ <
+value
+> 
+NUMBER
+
+
+33 %
+token
+ 
+ERROR
+
+
+34 %
+type
+ <
+expr
+> expr
+
+36 %
+left
+ 
+EQ
+ 
+NE
+ '?' '-' '+'
+
+37 %
+left
+ '*' '/'
+
+38 %
+nonassoc
+ 
+UMINUS
+
+
+40 %
+start
+ 
+program
+
+
+42 %% /* 
+	$yyparse
+ */ 
+	`yylex
+()
+
+44 
+program
+: program 
+stmt
+ | stmt;
+
+46 
+stmt
+: 
+ID
+ '=' 
+expr
+ ';'
+
+48 if (
+varSymTab
+.
+	`find
+(
+$1
+) == varSymTab.
+	`end
+())
+
+50 if (
+debug
+)
+
+51 
+cout
+ << "> creating variable: " << 
+$1
+ << 
+endl
+;
+
+52 
+varSymTab
+[
+$1
+] = 
+new
+ 
+	`eeVar
+($1);
+
+54 
+eeVar
+ *
+var
+ = 
+varSymTab
+[
+$1
+];
+
+55 
+var
+->
+	`setValue
+(
+$3
+->
+	`evaluate
+());
+
+56 
+	`free
+(
+$1
+);
+
+57 
+delete
+ 
+$3
+;
+
+59 | 
+expr
+ ';'
+
+61 
+cout
+ << 
+$1
+ << " : " << 
+fixed
+ << $1->
+	`evaluate
+() << 
+endl
+;
+
+62 
+delete
+ 
+$1
+;
+
+65 
+expr
+: expr '+' expr
+
+67 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_PLUS
+, 
+$1
+, 
+$3
+);
+
+69 | 
+expr
+ '-' expr
+
+71 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_MINUS
+, 
+$1
+, 
+$3
+);
+
+73 | 
+expr
+ '*' expr
+
+75 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_MUL
+, 
+$1
+, 
+$3
+);
+
+77 | 
+expr
+ '/' expr
+
+79 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_DIV
+, 
+$1
+, 
+$3
+);
+
+81 | 
+expr
+ 
+EQ
+ expr
+
+83 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_EQ
+, 
+$1
+, 
+$3
+);
+
+85 | 
+expr
+ 
+NE
+ expr
+
+87 
+$$
+ = 
+new
+ 
+	`eeBinaryExpr
+(
+EEOP_NE
+, 
+$1
+, 
+$3
+);
+
+89 | 
+expr
+ '?' expr ':' expr
+
+91 
+$$
+ = 
+new
+ 
+	`eeTernaryExpr
+(
+TERNOP
+, 
+$1
+, 
+$3
+, 
+$5
+);
+
+93 | 
+NUMBER
+
+
+95 
+$$
+ = 
+new
+ 
+	`eeConstExpr
+(
+$1
+);
+
+97 | 
+ID
+
+
+99 if (
+varSymTab
+.
+	`find
+(
+$1
+) == varSymTab.
+	`end
+())
+
+101 if (
+debug
+)
+
+102 
+cout
+ << "> creating variable: " << 
+$1
+ << 
+endl
+;
+
+103 
+varSymTab
+[
+$1
+] = 
+new
+ 
+	`eeVar
+($1);
+
+105 
+eeVar
+ *
+var
+ = 
+varSymTab
+[
+$1
+];
+
+106 
+$$
+ = 
+new
+ 
+	`eeNamedExpr
+(
+var
+);
+
+107 
+	`free
+(
+$1
+);
+
+109 | '(' 
+expr
+ ')'
+
+111 
+$$
+ = 
+$2
+;
+
+113 | '-' 
+expr
+ %
+prec
+ 
+UMINUS
+
+
+115 
+$$
+ = 
+new
+ 
+	`eeUnaryExpr
+(
+EEOP_UMINUS
+, 
+$2
+);
+
+119 
+	}
+%%
+
+121 void 
+	$yyfinalize
+()
+
+123 if (
+debug
+)
+
+124 
+cout
+ << "> Variables created:" << 
+endl
+;
+
+125 
+map
+<
+string
+, 
+eeVar
+*>::
+iterator
+ 
+iter
+;
+
+126 for(
+iter
+ = 
+varSymTab
+.
+	`begin
+(); iter != varSymTab.
+	`end
+(); iter++)
+
+128 if (
+debug
+)
+
+129 
+cout
+ << 
+iter
+->
+first
+ << " : " <<
+
+130 
+fixed
+ << 
+iter
+->
+second
+->
+	`getValue
+() << 
+endl
+;
+
+131 
+delete
+ 
+iter
+->
+second
+;
+
+133 
+varSymTab
+.
+	`clear
+();
+
+134 
+	}
+}
+
+	@
+1
+.
+0
+17
+283
+main/main.cpp
+om/eeBinaryExpr.cpp
+om/eeBinaryExpr.h
+om/eeConstExpr.cpp
+om/eeConstExpr.h
+om/eeDefines.h
+om/eeExpr.cpp
+om/eeExpr.h
+om/eeNamedExpr.cpp
+om/eeNamedExpr.h
+om/eeTernaryExpr.cpp
+om/eeTernaryExpr.h
+om/eeUnaryExpr.cpp
+om/eeUnaryExpr.h
+om/eeVar.h
+parser/eeLex.l
+parser/eeYacc.y

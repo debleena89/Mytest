@@ -1,0 +1,85 @@
+consChecker is a program for consistency checking of a given set of C assertions. The tool 
+consists of a parser front end which reads in an assertion file containing variable declarations 
+and assertions, generates an equivalent Yices files and passes on the file to Yices for 
+checking of consistency. 
+
+The installation instructions and usage guidelines follow.
+
+Dependencies:
+------------
+a) tc-shell for running the scripts
+b) make for compiling
+c) Flex and Bison for the parsers
+d) gcc compiler
+e) Yices
+
+Installation:
+------------
+
+Create a directory at a suitable place for installation. Let us suppose we name the 
+directory ISIConsChecker inside our home directory. The following are the steps:
+
+A) cd -- takes you directly to your home directory
+B) mkdir ISIConsChecker
+
+Move the compressed file consChecker.tar.gz inside $HOME/ISIConsChecker
+
+C) chdir  $HOME/ISIConsChecker -- Move into $HOME/ISIConsChecker and start installation
+
+D) Install consChecker
+	-- tar xvzf consChecker.tar.gz
+	-- chdir consChecker
+
+Directory Structure of consChecke
+---------------------------
+|-README									: This file
+|-om										: Class  implementation
+| |-eeExpre.h
+| |-eeExpre.cpp
+| |-eeBinaryExpr.h
+| |-eeBinaryExpr.cpp
+| |-eeDefines.h
+| |-eeDefines.cpp
+| |-eeDouble.h
+| |-eeDouble.cpp
+| |-eeInteger.h
+| |-eeInteger.cpp
+| |-eeNamedExpr.h
+| |-eeNamedExpr.cpp
+| |-eeVar.h
+| |-Makefile
+|-main                                     :Main function called
+| |-main.cpp
+|-parser				                   :Parsing Rules and grammar specification 
+| |-eeLex.l
+| |-eeYacc.y
+| |-Makefile
+|-run                                      :Run from here
+| |-runScript 
+|-Test                                     :Contains test files
+| |-inFile1-12
+
+
+Running consChecker
+-------------------
+
+1) Change the executable permission of yices 
+   chmod +x yices
+
+2) Go inside the run directory: cd run
+
+3) Change the executable permission of runScript
+   chmod +x runScript
+
+4) ./runScript <TestFileName>
+   Example: ./runScript ../Test/inFile4
+
+This produces a file called t.ys inside the current directory and passes it on to Yices 
+for checking.
+
+Finally, we display if the given set of assertins are consistency or inconsistent.
+
+Test directory
+--------------
+
+The test directory contains test-cases to test consChecker on different examples.

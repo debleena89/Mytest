@@ -1,0 +1,4 @@
+int x, y;
+assume ((x >= 6) && (x < 8));
+assume ((y >= 5) && (y < 9));
+assume (x+y >= 10);

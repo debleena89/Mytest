@@ -1,0 +1,12 @@
+
+int a,b,c,d;
+
+assert(a = 0);
+
+assume(a >= b);
+assert(b < c);
+assert(c >= 90);
+
+assume(d < 6);
+
+

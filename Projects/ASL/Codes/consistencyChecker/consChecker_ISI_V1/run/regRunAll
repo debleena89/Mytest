@@ -1,0 +1,5 @@
+#/bin/tcsh
+
+foreach file (`ls ../Test/`)
+	./runScript ../Test/$file
+end

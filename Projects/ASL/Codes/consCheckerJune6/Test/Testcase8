@@ -1,0 +1,7 @@
+
+   unsigned int autoprebits;
+   assume(autoprebits == 0x00000000);
+   
+   assert(autoprebits == autoprebits | 0x00100000);
+
+  

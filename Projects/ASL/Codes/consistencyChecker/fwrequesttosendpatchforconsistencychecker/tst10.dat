@@ -1,0 +1,7 @@
+
+ unsigned int a,b;
+
+ assume (a = 0xa2c3);
+
+ assert ( (b = a & ~0x3f06) << 8);
+ 

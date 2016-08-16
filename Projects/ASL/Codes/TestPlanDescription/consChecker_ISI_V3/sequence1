@@ -1,0 +1,7 @@
+input : int  F1, F2;
+output: int  Temp1, Temp2;
+
+seq = ((F1 > 0) && (F2 > 1)):((F1 + F2) < 3) && (Temp1 = 1);
+
+
+

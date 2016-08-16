@@ -1,0 +1,6 @@
+(define flag::int)
+(define flag1::int)
+
+(assert(or(< flag 3) (< flag1 1)))
+(check)
+(show-model)

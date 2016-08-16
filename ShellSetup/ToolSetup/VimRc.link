@@ -1,0 +1,109 @@
+" Vim
+" An example for a vimrc file.
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.vimrc
+"             for Amiga:  s:.vimrc
+"  for MS-DOS and Win32:  $VIM\_vimrc
+"  Changed by Amit Roy
+
+set nocompatible	" Use Vim defaults (much better!)
+set bs=2		" allow backspacing over everything in insert mode
+"set ai			" always set autoindenting on
+set nobackup	" keep no backup file
+set viminfo='20,\"50	" read/write a .viminfo file, don't store more
+			" than 50 lines of registers
+
+" In text files, always limit the width of text to 78 characters
+autocmd BufRead *.txt set tw=78	
+
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
+" let &guioptions = substitute(&guioptions, "t", "", "g")
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+"if has("terminfo")
+"    set t_Co=8
+"    set t_Sf=[3%p1%dm
+"    set t_Sb=[4%p1%dm
+"else
+"    set t_Co=8 
+"    set t_Sf=[3%dm
+"    set t_Sb=[4%dm
+"endif
+"
+"if &t_Co > 2 || has("gui_running")
+"  syntax off
+"  set hlsearch
+"endif
+
+augroup cprog
+  " Remove all cprog autocommands
+  au!
+
+  " When starting to edit a file:
+  "   For *.c and *.h files set formatting of comments and set C-indenting on.
+  "   For other files switch it off.
+  "   Don't change the order, it's important that the line with * comes first.
+  "autocmd BufRead *       set formatoptions=tcql nocindent comments&
+  autocmd BufRead *.c,*.h set formatoptions=croql cindent comments=sr:/*,mb:*,el:*/,://
+augroup END
+
+augroup gzip
+  " Remove all gzip autocommands
+  au!
+
+  " Enable editing of gzipped files
+  "	  read:	set binary mode before reading the file
+  "		uncompress text in buffer after reading
+  "	 write:	compress file after writing
+  "	append:	uncompress file, append, compress file
+  autocmd BufReadPre,FileReadPre	*.gz set bin
+  autocmd BufReadPost,FileReadPost	*.gz let ch_save = &ch|set ch=2
+  autocmd BufReadPost,FileReadPost	*.gz '[,']!gunzip
+  autocmd BufReadPost,FileReadPost	*.gz set nobin
+  autocmd BufReadPost,FileReadPost	*.gz let &ch = ch_save|unlet ch_save
+  autocmd BufReadPost,FileReadPost	*.gz execute ":doautocmd BufReadPost " . expand("%:r")
+
+  autocmd BufWritePost,FileWritePost	*.gz !mv <afile> <afile>:r
+  autocmd BufWritePost,FileWritePost	*.gz !gzip <afile>:r
+
+  autocmd FileAppendPre			*.gz !gunzip <afile>
+  autocmd FileAppendPre			*.gz !mv <afile>:r <afile>
+  autocmd FileAppendPost		*.gz !mv <afile> <afile>:r
+  autocmd FileAppendPost		*.gz !gzip <afile>:r
+augroup END
+
+
+set showmode
+set nomesg
+set tabstop=4
+set nonumber
+set showmatch
+set noai
+"set hlsearch
+"set cinwords
+set cindent
+"set nocindent
+set smarttab
+set shiftwidth=4
+"set mouse=a
+set ruler
+map #1 :!more ~/.vi_help
+map #2 :w
+map #3 mQ:e!'Q
+map #5 :syntax off
+map #6 :syntax on
+map #9 :1,$s/
+map #4 :set cindent
+map #7 :set noai:set nocindent
+map v :1,$s/	/    /g
+map V :23,$s/    /  /g
+map [19~ :n
+
+" VHDL Template Generation
+map H :set noai:set nocindentalibrary ieee;use ieee.std_logic_1164.all;entity ent is	port (		d:	in  std_logic;		q:	out std_logic		);end ent;architecture arch of ent issignal sig1:	std_logic;begin	process	begin	end process;end arch;:set ai:set cindent
+

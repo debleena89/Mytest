@@ -1,0 +1,6 @@
+int a, b, y, t;
+
+assert(a < b);
+assert(b < 10);
+
+assert((t + y) > 0);

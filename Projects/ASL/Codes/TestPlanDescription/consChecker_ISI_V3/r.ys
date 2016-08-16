@@ -1,0 +1,7 @@
+(define Flag::int)
+(assert(> Flag 1))
+(assert(/= Flag 1))
+(assert(/= Flag 2))
+(assert(/= Flag 1923))
+(check)
+(show-model)

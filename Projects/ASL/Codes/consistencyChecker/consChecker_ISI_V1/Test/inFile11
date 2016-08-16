@@ -1,0 +1,9 @@
+
+int a, b;
+
+assume(a < b);
+assume(b < 10);
+
+
+
+

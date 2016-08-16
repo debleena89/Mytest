@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Background and Related Work}{3}
+\contentsline {subsection}{\numberline {2.1}Formal Specification Development}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}Temporal Logics}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}Consistency Issues in Specification Development}{4}
+\contentsline {subsection}{\numberline {2.2}Property Verification Approaches}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}The FPV approach}{5}
+\contentsline {subsubsection}{\numberline {2.2.2}The Dynamic ABV approach}{6}
+\contentsline {subsubsection}{\numberline {2.2.3}Semi-Formal Verification}{7}
+\contentsline {section}{\numberline {3}Contributions of this dissertation}{8}
+\contentsline {section}{\numberline {4}Property Guided Simulation for ABV}{9}
+\contentsline {subsection}{\numberline {4.1}Non-vacuous Input generation}{9}
+\contentsline {subsection}{\numberline {4.2}Test generation for unreceptive specifications}{11}
+\contentsline {subsection}{\numberline {4.3}Test Generation Algorithms}{12}
+\contentsline {subsection}{\numberline {4.4}Implementation and Results}{12}
+\contentsline {section}{\numberline {5}Context Sensitive Formal Specifications}{13}
+\contentsline {subsection}{\numberline {5.1}The Formal Model}{15}
+\contentsline {subsection}{\numberline {5.2}Context-Sensitive Assertions: The FPV Advantage}{15}
+\contentsline {subsection}{\numberline {5.3}Semi-Formal Verification with Context Sensitive Assertions}{16}
+\contentsline {subsubsection}{\numberline {5.3.1}Implementation and Results}{17}
+\contentsline {subsection}{\numberline {5.4}Context Sensitive Properties: Consistency Analysis}{18}
+\contentsline {section}{\numberline {6}Open Linear Temporal Logic for modular FPV}{18}
+\contentsline {subsection}{\numberline {6.1}The Realizability Problem due to absence of input-output discrimination}{19}
+\contentsline {subsection}{\numberline {6.2}Issue of Negation}{19}
+\contentsline {subsection}{\numberline {6.3}Open Linear Temporal Logic: A new solution}{20}
+\contentsline {subsection}{\numberline {6.4}Verification Algorithms}{21}
+\contentsline {section}{\numberline {7}An integrated framework for ABV for UML Statecharts}{21}
+\contentsline {subsection}{\numberline {7.1}Assertion Specification Language}{22}
+\contentsline {subsection}{\numberline {7.2}Architecting the ABV engine}{23}
+\contentsline {section}{\numberline {8}Organization of the dissertation}{23}
+\contentsline {section}{\numberline {9}Dissemination of this work}{24}

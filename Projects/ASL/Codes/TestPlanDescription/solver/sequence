@@ -1,0 +1,6 @@
+bool Flag, TempFailure, T;
+
+T = [ Flag ] : TempFailure;
+		
+
+

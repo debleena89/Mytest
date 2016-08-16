@@ -1,0 +1,11 @@
+
+int a, b, c;
+
+assert(a >= 6);
+ 
+assume (b > 7);
+
+assume(c > 10);
+
+assert(c = (a + b));
+

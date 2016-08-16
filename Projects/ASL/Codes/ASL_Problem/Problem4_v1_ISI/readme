@@ -1,0 +1,18 @@
+I have written the Assertions in VerifCheckStatus() function(Line no. 166).
+
+The assertions that I tried to modeled is based on the Relative Limit Validity (b.ii) of second level of validation i.e System1 Data Validity checks(Axes wise).
+
+Relative Limit Validation becomes invalid when the difference between previos sample and present sample count is greater than 0.0489. If Relative Limit failure ( that means Relative Limit Validation becomes Invalid) is observed, intermittent failure for the current sample is indicated in the Interstatus flag by placing appropriate bits. From page 5 of the specification documents, Significance of each bit is found. From there I understood that..
+
+   if difference > 0.0489 and current sample is X then Interstatus = 0x0010
+   if difference > 0.0489 and current sample is Y then Interstatus = 0x0020
+   if difference > 0.0489 and current sample is Z then Interstatus = 0x0040.
+
+But apart from the above steps, other combinations of Interstatus flag value are also posiible as in each step new Interstatus flag value is combined with the previous value of Interstatus by OR operation.
+
+What my understanding is:-
+
+  there are 3 axes X, Y and Z.
+Any of 7 possible condition can occur( not 8 because when none of then fails the Relative Limit Validation is valid). To model these 7 conditions I considered 7 OK conditions.
+
+   

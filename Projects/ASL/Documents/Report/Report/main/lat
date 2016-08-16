@@ -1,0 +1,4 @@
+latex book.tex 
+dvips -ta4 book.dvi -o
+ps2pdf book.ps
+evince book.pdf &

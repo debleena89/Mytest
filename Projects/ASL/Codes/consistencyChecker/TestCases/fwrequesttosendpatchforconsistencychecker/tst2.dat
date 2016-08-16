@@ -1,0 +1,5 @@
+
+int mask;
+assert (mask = 0x01);
+assert (mask = (mask << 1));
+ 

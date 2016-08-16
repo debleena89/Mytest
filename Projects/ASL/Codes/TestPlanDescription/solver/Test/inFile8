@@ -1,0 +1,8 @@
+
+int a, b, c, d;
+ 
+
+assume(a > b);
+assume(b > c);
+assume(c > d);
+

@@ -1,0 +1,8 @@
+int *p;
+
+float x;
+
+p = &x;
+
+__CPROVER_assume (*p == x);
+

@@ -1,0 +1,33 @@
+#/bin/tcsh -v
+
+#Transform input file to cbmc format
+rm -rf outFile.c
+
+set testCase = $argv[1]
+set outputFile = outFile.c
+
+sed 's/assume/__CPROVER_assume/' $testCase > tmpTestCase
+sed 's/assert/__CPROVER_assume/' tmpTestCase > replacedTestCase
+sed 's/bool/__CPROVER_bool/' replacedTestCase > replaceBoolCase
+echo "#include <stdio.h>" > $outputFile
+echo "" >> $outputFile
+echo "int main()" >> $outputFile
+echo "{" >> $outputFile
+cat replaceBoolCase >> $outputFile
+echo ""
+
+echo '__CPROVER_assert(0, "Hello");' >> $outputFile
+echo "return 0;" >> $outputFile
+echo "}" >> $outputFile
+
+#CBMC Action starts from here
+./cbmc outFile.c --cover assertion > cbmcLoG
+grep -q "UNSATISFIABLE" cbmcLoG 
+if( $? == 1) then
+echo "Given assertions are consistent"
+else
+echo "Given assertions are Inconsistent"
+endif
+
+#rm -rf tmpTestCase replacedTestCase replaceBoolCase cbmcLoG 
+

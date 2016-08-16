@@ -1,0 +1,2 @@
+set path = (/opt/jdk1.7.0_06/bin/ $path)
+source ~/algs4/bin/config.csh

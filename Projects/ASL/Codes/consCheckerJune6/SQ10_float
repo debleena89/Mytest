@@ -1,0 +1,6 @@
+
+float x, z;
+assume(x > 9.0);
+assume(z < 8.0);
+assert(z > (2.0+x));
+

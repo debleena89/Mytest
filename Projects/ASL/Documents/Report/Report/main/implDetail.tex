@@ -1,0 +1,185 @@
+\noindent
+Assertions in Action-LTL are written over the model attributes, specifically, 
+the data members and events.
+Hence, to determine satisfaction/refutation of an assertion at a simulation 
+step due to the model behavior, it is necessary to be able to sample values 
+of the model attributes. 
+Below, we briefly explain the issues faced by us in 
+developing the dynamic ABV platform over Rhaspody and subsequently, the 
+approaches adopted by us.
+ 
+\begin{enumerate}
+\item The assertion monitor 
+must be able to sense all the events dispatched in the model. Whenever an 
+event is dispatched in the model, the verifier should be informed about the 
+event, its parameters, if any, and its target. 
+
+\item With inception of every event, the assertion monitor 
+must check if the model configuration satisfies/refutes the desired 
+specification.
+The assertion monitor must remember the context of verification; it must
+remember what has to be checked after dispatch of each event to certify 
+correctness of the model at that point of time. 
+
+\item An interface is necessary through which model data attributes can 
+be sampled by the assertion monitor. 
+
+%\item The behavior of the assertion monitor must be robust enough to cope up
+%with scheduling semantics of the Rhapsody simulation engine. This means that
+%over all possible valid scheduling scenarios, the result of verification 
+%must be same. More specifically, an error, if any, must be caught in each 
+%and every valid schedule of Rhapsody simulation. 
+
+\item The UML model must be minimally perturbed in course of 
+building the assertion monitors. Last but not the least, the assertion 
+monitors must be seamlessly integrable into an already existing design 
+environment over Rhapsody.
+\end{enumerate}
+
+\subsection{Our approach}
+\noindent
+We now briefly discuss about the strategies adopted by us in addressing the 
+above issues over Rhapsody. 
+
+\begin{itemize}
+
+\item We have overloaded a Rhapsody macro, named RiCGEN, to make the 
+assertion monitor aware of the event transaction in the model. Whenever 
+an event 
+is dispatched in the original model, a copy of the event is instantaneously 
+delivered to the assertion monitor.
+
+\item The assertion monitor has been implemented as a Rhapsody object with an 
+embedded C routine. At every simulation step, on notification of an 
+event dispatch, the assertion monitor samples the data attribute values 
+and checks for satisfaction/refutations. The C routine, based on the 
+one step unfolding of the temporal properties as discussed in the 
+previous section, has been developed and a 
+control logic has been designed that calls that routine appropriately. 
+
+\item To be able to read the values of the public data attributes of each 
+object at each simulation step, the assertion monitor object is integrated 
+at the appropriate class hierarchy that reveals the basic building components 
+of the assertion monitor and the relationships that the individual components 
+share among themselves and with the model elements. These relationships explain 
+how the monitor can access the model data attributes during simulation. 
+
+\item For integrating the assertion monitor with the Rhapsody model under 
+test, one needs to have access permission inside the class hierarchy 
+to be able to insert the assertion monitor object. No modification of the 
+original model is needed for this purpose. 
+\end{itemize}
+
+\noindent
+We first discuss the RiCGEN overloading operation and its contribution in our
+work. 
+
+\subsubsection{RiCGEN Overloading} 
+RiCGEN is a macro that is the core of the event transfer mechanism of Rhapsody.
+In the code base, the sender element (actor, class etc.) of an event calls this
+ macro with the name of the target element and the event, with parameters if
+applicable. By overloading this macro, we achieve that whenever an event is 
+thrown targeting any model element, a copy of the same event with same 
+parameters, if any, would go to the {\em assertion monitor}.
+\footnote{The actual monitor component which receives this copy of any event 
+is mentioned in the architecture}. The overloaded RiCGEN routine 
+is given below.
+
+\vspace{0.1in} 
+
+{\tt
+\noindent \#define RiCGEN(INSTANCE,EVENT)\hfill  \\
+\{				\hfill  \\
+\indent	if ((INSTANCE) != NULL) \hfill  \\
+\indent	\{ 			\hfill  \\						\indent \indent	RiCReactive * reactive = \&((INSTANCE)->ric\_reactive);	\hfill  \\
+\indent \indent	RiCEvent * event = \&(RiC\_Create\_\#\#EVENT->ric\_event);\hfill  \\
+\indent \indent	RiCEvent * eventCopy = \&(RiC\_Create\_\#\#EVENT->ric\_event);\hfill  \\
+\indent \indent RiCReactive\_gen(reactive, event, RiCFALSE);\hfill  \\
+\indent \indent	RiCReactive\_gen( \&((\&obsrvEventReceiver)->ric\_reactive), \hfill \\ 
+\indent \indent \indent \indent \indent \indent \hfill eventCopy, RiCFALSE);	 \\
+\indent	\}	\hfill \\
+\}\\
+}
+
+\noindent
+The element {\tt obsrvEventReceiver} is a component object of the assertion 
+monitor. Its 
+significance and role in the object hierarchy is discussed below.
+Two important objectives have been achieved in this 
+implementation of the overloading:
+
+\begin{itemize}
+\item Whenever this overloaded macro is called (by some model
+element to throw an event to some other), a copy of the same event is
+thrown to the object {\tt obsrvEventReceiver}. This makes the assertion 
+monitor aware of the inception of the corresponding event.
+
+\item Once this macro is called, two instances of the same event
+are pushed to the event queue consecutively. This is important, since, as 
+mentioned previously, Rhapsody assumes a RTC semantics and at every step, 
+a single event is dispatched. Whenever 
+a dispatched event causes the model to move from one stable configuration to 
+another, the next event notifies the monitor which then performs the 
+desired task. 
+\end{itemize}
+
+\subsubsection{Assertion Monitor Architecture}\label{checkArch}
+\noindent
+The assertion monitor is a component that monitors the simulation 
+of the UML model for any property violation. 
+At the heart of the monitor lies an object named {\tt obsrvEventReceiver}. 
+This object performs all the verification tasks including the 
+reception of the copies of events dispatched in the model via overloaded 
+RiCGEN macro. The dynamic behavior of this object is shown in the Statechart 
+of Figure~\ref{fig8.5}.
+
+\begin{figure}[htbp]
+\begin{center}
+\psfrag{s1}{{\tt Init}}
+\psfrag{s2}{{\tt WaitForEvent}}
+\psfrag{s3}{{\tt SampleVal}}
+\psfrag{s4}{{\tt Check}}
+\psfrag{event}{{\tt event}}
+\includegraphics[scale=0.95]{../journal07/oER.pstex}
+\end{center}
+\caption{The Statechart for {\tt obsrvEventReceiver}} \label{fig8.5}
+\end{figure}
+
+\noindent
+Tasks of the four states of the object {\tt obsrvEventReceiver} are shown 
+shown in Table~\ref{tab:oER}. The tansition, labeled with {\tt event}, from 
+state {\tt WaitForEvent} to state {\tt SampleVal} of Figure~\ref{fig8.5} 
+signifies that control would jump from {\tt WaitForEvent} to {\tt SampleVal}
+when a copy of any event dispatched in the model will reach the object 
+{\tt obsrvEventReceiver} via RiCGEN. 
+
+\begin{table}[!hbtp]
+\caption{The tasks of different states of {\tt obsrvEventReceiver}}
+\label{tab:oER}
+\begin{center}
+
+\begin{tabular}{|c|p{4.5in}|}
+\hline
+State Name & Responsibility \\
+\hline \hline
+{\tt Init} & Initialization of \\
+	& data-structures for internal housekeeping\\
+\hline
+{\tt WaitForEvent} & Control waits for any event dispatch in the model\\
+\hline
+{\tt SampleVal} & Immediately after dispatch of any event in the model, control samples values of model attributes necessary for verification\\
+\hline
+{\tt Check} & Control checks for any specification violation using the values 
+	sampled in {\tt SampleVal} state. The salient steps are\\
+	& 1. Retrieves the context of verification for the current step\\
+	& 2. Reads values of the attributes relevant to the present step context
+		from the set of attributes sampled in the previous state\\
+	& 3. Substitutes the relevant values for the attributes to check for 
+		any violation. It reports, if any violation has been detected.\\
+	& 4. Otherwise, it prepares and saves the context of verification for 
+		the next step.\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+

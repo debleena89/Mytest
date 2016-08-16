@@ -1,0 +1,3 @@
+latex report.tex
+dvips report -o 
+gv report.ps &

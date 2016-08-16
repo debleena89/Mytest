@@ -1,0 +1,6 @@
+int a,b;
+assume(a == 16);
+assume(b == 5);
+assert(a % b);
+
+

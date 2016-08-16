@@ -1,0 +1,7 @@
+
+int a, b, c;
+
+assume(a = 0);
+
+assert(c = (a + b));
+

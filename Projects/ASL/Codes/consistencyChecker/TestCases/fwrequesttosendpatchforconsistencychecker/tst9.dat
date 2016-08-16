@@ -1,0 +1,9 @@
+
+   unsigned char sts[2];
+   char mask;
+   
+   assume (mask = 0x01);
+   assume (sts[0] = 0xFF);
+
+   assert(sts[0] &= ~mask);
+

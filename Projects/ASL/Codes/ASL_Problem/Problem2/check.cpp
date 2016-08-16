@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  int  p=0;
+  unsigned char zero_array[16];
+  unsigned char survstatbuf[16];
+
+     bzero(zero_array,16);
+
+      if(memcmp(zero_array,survstatbuf,12)==0)
+         printf("true");
+      else
+         printf("false........");
+  
+  //_CPROVER_assert(p!=0,"failed");
+  return 0;
+}

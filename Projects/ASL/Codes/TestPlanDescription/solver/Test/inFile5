@@ -1,0 +1,5 @@
+
+int m, n, o, p;
+
+assert((m + n) > (p + o));
+

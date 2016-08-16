@@ -1,0 +1,2276 @@
+file Verif.c: Parsing
+Converting
+Type-checking Verif
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Unwinding loop c::main.0 iteration 1 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 2 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 3 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 4 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 5 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 6 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 7 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 8 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 9 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 10 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 11 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 12 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 13 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 14 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 15 file Verif.c line 264 function main thread 0
+Unwinding loop c::main.0 iteration 16 file Verif.c line 264 function main thread 0
+Unwinding loop c::check_DC_DC.0 iteration 1 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 2 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 3 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 4 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 5 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 6 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 7 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 8 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 9 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 10 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 11 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 12 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 13 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 14 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 15 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.0 iteration 16 file Verif.c line 128 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 1 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 2 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 3 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 4 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 5 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 6 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 7 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 8 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 9 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 10 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 11 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.1 iteration 12 file Verif.c line 132 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 1 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 2 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 3 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 4 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 5 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 6 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 7 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 8 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 9 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 10 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 11 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.2 iteration 12 file Verif.c line 137 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.3 iteration 1 file Verif.c line 144 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.3 iteration 2 file Verif.c line 144 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.3 iteration 3 file Verif.c line 144 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.3 iteration 4 file Verif.c line 144 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.4 iteration 1 file Verif.c line 149 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.4 iteration 2 file Verif.c line 149 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.4 iteration 3 file Verif.c line 149 function check_DC_DC thread 0
+Unwinding loop c::check_DC_DC.4 iteration 4 file Verif.c line 149 function check_DC_DC thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 1 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 2 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 3 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 4 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 5 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 6 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 7 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 8 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 9 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 10 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 11 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 12 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 13 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 14 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 15 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.0 iteration 16 file Verif.c line 43 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 1 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 2 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 3 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 4 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 5 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 6 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 7 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 8 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 9 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 10 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 11 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.1 iteration 12 file Verif.c line 46 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 1 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 2 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 3 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 4 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 5 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 6 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 7 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 8 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 9 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 10 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 11 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.2 iteration 12 file Verif.c line 47 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 1 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 2 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 3 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 4 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 5 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 6 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 7 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 8 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 9 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 10 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 11 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.3 iteration 12 file Verif.c line 49 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 1 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 2 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 3 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 4 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 5 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 6 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 7 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 8 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 9 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 10 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 11 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.4 iteration 12 file Verif.c line 50 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.5 iteration 1 file Verif.c line 52 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.5 iteration 2 file Verif.c line 52 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.5 iteration 3 file Verif.c line 52 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.5 iteration 4 file Verif.c line 52 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.6 iteration 1 file Verif.c line 53 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.6 iteration 2 file Verif.c line 53 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.6 iteration 3 file Verif.c line 53 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.6 iteration 4 file Verif.c line 53 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.7 iteration 1 file Verif.c line 55 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.7 iteration 2 file Verif.c line 55 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.7 iteration 3 file Verif.c line 55 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.7 iteration 4 file Verif.c line 55 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.8 iteration 1 file Verif.c line 56 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.8 iteration 2 file Verif.c line 56 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.8 iteration 3 file Verif.c line 56 function verifDc_Dc thread 0
+Unwinding loop c::verifDc_Dc.8 iteration 4 file Verif.c line 56 function verifDc_Dc thread 0
+size of program expression: 3284 steps
+simple slicing removed 7 assignments
+Generated 20 VCC(s), 20 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT 2.2.0 with simplifier
+37384 variables, 64003 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 0.098s
+Building error trace
+
+Counterexample:
+
+State 3 file <built-in-additions> line 45 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000000000000000000000000000)
+
+State 4 file <built-in-additions> line 66 thread 0
+----------------------------------------------------
+  __CPROVER_pipe_count=0u (00000000000000000000000000000000)
+
+State 5 file <built-in-additions> line 22 thread 0
+----------------------------------------------------
+  __CPROVER_threads_exited=__CPROVER_threads_exited#1 (?)
+
+State 6 file <built-in-additions> line 23 thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 7 file Verif.c line 24 thread 0
+----------------------------------------------------
+  survstatbuf={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 8 file Verif.c line 25 thread 0
+----------------------------------------------------
+  survstatbuf2={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 9 file Verif.c line 28 thread 0
+----------------------------------------------------
+  No_liu1_data=0 (00000000000000000000000000000000)
+
+State 10 file Verif.c line 29 thread 0
+----------------------------------------------------
+  No_liu2_data=0 (00000000000000000000000000000000)
+
+State 11 file Verif.c line 30 thread 0
+----------------------------------------------------
+  liu1_notok=0 (00000000000000000000000000000000)
+
+State 12 file Verif.c line 31 thread 0
+----------------------------------------------------
+  liu2_notok=0 (00000000000000000000000000000000)
+
+State 13 file Verif.c line 33 thread 0
+----------------------------------------------------
+  MainDC_DC=FALSE (0)
+
+State 14 file <built-in-additions> line 30 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 15 file Verif.c line 34 thread 0
+----------------------------------------------------
+  StdbyDC_DC=FALSE (0)
+
+State 16 file <built-in-additions> line 31 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 17 file <built-in-additions> line 32 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 18 file Verif.c line 35 thread 0
+----------------------------------------------------
+  mstat=FALSE (0)
+
+State 19 file <built-in-additions> line 33 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_is_new_array=FALSE (0)
+
+State 20 file Verif.c line 35 thread 0
+----------------------------------------------------
+  sstat=FALSE (0)
+
+State 21 file Verif.c line 35 thread 0
+----------------------------------------------------
+  mcstat=FALSE (0)
+
+State 22 file Verif.c line 35 thread 0
+----------------------------------------------------
+  scstat=FALSE (0)
+
+State 26 file Verif.c line 260 function main thread 0
+----------------------------------------------------
+  chno=0 (00000000000000000000000000000000)
+
+State 27 file Verif.c line 260 function main thread 0
+----------------------------------------------------
+  chno=55 (00000000000000000000000000110111)
+
+State 28 file Verif.c line 261 function main thread 0
+----------------------------------------------------
+  common=0 (00000000000000000000000000000000)
+
+State 29 file Verif.c line 261 function main thread 0
+----------------------------------------------------
+  common=262146 (00000000000001000000000000000010)
+
+State 30 file Verif.c line 262 function main thread 0
+----------------------------------------------------
+  t=0 (00000000000000000000000000000000)
+
+State 31 file Verif.c line 262 function main thread 0
+----------------------------------------------------
+  t=0 (00000000000000000000000000000000)
+
+State 32 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 33 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=0 (00000000000000000000000000000000)
+
+State 35 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[0l]=0 (00000000)
+
+State 36 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[0l]=0 (00000000)
+
+State 37 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=1 (00000000000000000000000000000001)
+
+State 40 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[1l]=0 (00000000)
+
+State 41 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[1l]=0 (00000000)
+
+State 42 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=2 (00000000000000000000000000000010)
+
+State 45 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[2l]=0 (00000000)
+
+State 46 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[2l]=0 (00000000)
+
+State 47 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=3 (00000000000000000000000000000011)
+
+State 50 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[3l]=0 (00000000)
+
+State 51 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[3l]=0 (00000000)
+
+State 52 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=4 (00000000000000000000000000000100)
+
+State 55 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[4l]=0 (00000000)
+
+State 56 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[4l]=0 (00000000)
+
+State 57 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=5 (00000000000000000000000000000101)
+
+State 60 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[5l]=0 (00000000)
+
+State 61 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[5l]=0 (00000000)
+
+State 62 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=6 (00000000000000000000000000000110)
+
+State 65 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[6l]=0 (00000000)
+
+State 66 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[6l]=128 (10000000)
+
+State 67 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=7 (00000000000000000000000000000111)
+
+State 70 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[7l]=0 (00000000)
+
+State 71 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[7l]=0 (00000000)
+
+State 72 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=8 (00000000000000000000000000001000)
+
+State 75 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[8l]=0 (00000000)
+
+State 76 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[8l]=0 (00000000)
+
+State 77 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=9 (00000000000000000000000000001001)
+
+State 80 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[9l]=0 (00000000)
+
+State 81 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[9l]=0 (00000000)
+
+State 82 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=10 (00000000000000000000000000001010)
+
+State 85 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[10l]=0 (00000000)
+
+State 86 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[10l]=0 (00000000)
+
+State 87 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=11 (00000000000000000000000000001011)
+
+State 90 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[11l]=0 (00000000)
+
+State 91 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[11l]=255 (11111111)
+
+State 92 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=12 (00000000000000000000000000001100)
+
+State 95 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[12l]=0 (00000000)
+
+State 96 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[12l]=0 (00000000)
+
+State 97 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=13 (00000000000000000000000000001101)
+
+State 100 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[13l]=0 (00000000)
+
+State 101 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[13l]=0 (00000000)
+
+State 102 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=14 (00000000000000000000000000001110)
+
+State 105 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[14l]=0 (00000000)
+
+State 106 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[14l]=0 (00000000)
+
+State 107 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=15 (00000000000000000000000000001111)
+
+State 110 file Verif.c line 266 function main thread 0
+----------------------------------------------------
+  survstatbuf[15l]=0 (00000000)
+
+State 111 file Verif.c line 267 function main thread 0
+----------------------------------------------------
+  survstatbuf2[15l]=0 (00000000)
+
+State 112 file Verif.c line 264 function main thread 0
+----------------------------------------------------
+  i=16 (00000000000000000000000000010000)
+
+State 117 file Verif.c line 270 function main thread 0
+----------------------------------------------------
+  chno=55 (00000000000000000000000000110111)
+
+State 118 file Verif.c line 270 function main thread 0
+----------------------------------------------------
+  common=262146 (00000000000001000000000000000010)
+
+State 119 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  byte=0 (00000000000000000000000000000000)
+
+State 120 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  byte=0 (00000000000000000000000000000000)
+
+State 121 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  bitinbyte=0 (00000000000000000000000000000000)
+
+State 122 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  bitinbyte=0 (00000000000000000000000000000000)
+
+State 123 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  ret=0 (00000000000000000000000000000000)
+
+State 124 file Verif.c line 160 function get_tmr_status thread 0
+----------------------------------------------------
+  ret=2 (00000000000000000000000000000010)
+
+State 125 file Verif.c line 162 function get_tmr_status thread 0
+----------------------------------------------------
+  mask=0 (00000000)
+
+State 126 file Verif.c line 162 function get_tmr_status thread 0
+----------------------------------------------------
+  mask=1 (00000001)
+
+State 127 file Verif.c line 163 function get_tmr_status thread 0
+----------------------------------------------------
+  output=TRUE (1)
+
+State 128 file Verif.c line 163 function get_tmr_status thread 0
+----------------------------------------------------
+  output_undef=FALSE (0)
+
+State 129 file Verif.c line 163 function get_tmr_status thread 0
+----------------------------------------------------
+  output_undef=FALSE (0)
+
+State 130 file Verif.c line 166 function get_tmr_status thread 0
+----------------------------------------------------
+  byte=6 (00000000000000000000000000000110)
+
+State 131 file Verif.c line 167 function get_tmr_status thread 0
+----------------------------------------------------
+  bitinbyte=7 (00000000000000000000000000000111)
+
+State 133 file Verif.c line 170 function get_tmr_status thread 0
+----------------------------------------------------
+  mask=128 (10000000)
+
+State 135 file Verif.c line 175 function get_tmr_status thread 0
+----------------------------------------------------
+  mstat=FALSE (0)
+
+State 137 file Verif.c line 178 function get_tmr_status thread 0
+----------------------------------------------------
+  sstat=TRUE (1)
+
+State 139 file Verif.c line 182 function get_tmr_status thread 0
+----------------------------------------------------
+  mask=1 (00000001)
+
+State 140 file Verif.c line 183 function get_tmr_status thread 0
+----------------------------------------------------
+  byte=32768 (00000000000000001000000000000000)
+
+State 141 file Verif.c line 184 function get_tmr_status thread 0
+----------------------------------------------------
+  bitinbyte=2 (00000000000000000000000000000010)
+
+State 143 file Verif.c line 187 function get_tmr_status thread 0
+----------------------------------------------------
+  mask=4 (00000100)
+
+State 145 file Verif.c line 190 function get_tmr_status thread 0
+----------------------------------------------------
+  mcstat=TRUE (1)
+
+State 148 file Verif.c line 195 function get_tmr_status thread 0
+----------------------------------------------------
+  scstat=TRUE (1)
+
+State 156 file Verif.c line 206 function get_tmr_status thread 0
+----------------------------------------------------
+  output=TRUE (1)
+
+State 161 file Verif.c line 248 function get_tmr_status thread 0
+----------------------------------------------------
+  ret=1 (00000000000000000000000000000001)
+
+State 164 file Verif.c line 253 function get_tmr_status thread 0
+----------------------------------------------------
+  t=1 (00000000000000000000000000000001)
+
+State 168 file Verif.c line 273 function main thread 0
+----------------------------------------------------
+  verifchno=55 (00000000000000000000000000110111)
+
+State 169 file Verif.c line 41 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 171 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  s=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 172 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  s=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 173 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  c=0 (00000000000000000000000000000000)
+
+State 174 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  c=0 (00000000000000000000000000000000)
+
+State 175 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 176 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=16ul (0000000000000000000000000000000000000000000000000000000000010000)
+
+State 177 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  sp=((char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 178 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  sp=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 179 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 180 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 182 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 183 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 186 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 187 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 190 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 191 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 194 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 195 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=4ul (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 198 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 199 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=5ul (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 202 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 203 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=6ul (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 206 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 207 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=7ul (0000000000000000000000000000000000000000000000000000000000000111)
+
+State 210 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 211 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=8ul (0000000000000000000000000000000000000000000000000000000000001000)
+
+State 214 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 215 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=9ul (0000000000000000000000000000000000000000000000000000000000001001)
+
+State 218 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 219 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=10ul (0000000000000000000000000000000000000000000000000000000000001010)
+
+State 222 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 223 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=11ul (0000000000000000000000000000000000000000000000000000000000001011)
+
+State 226 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 227 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=12ul (0000000000000000000000000000000000000000000000000000000000001100)
+
+State 230 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 231 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=13ul (0000000000000000000000000000000000000000000000000000000000001101)
+
+State 234 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 235 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=14ul (0000000000000000000000000000000000000000000000000000000000001110)
+
+State 238 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 239 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=15ul (0000000000000000000000000000000000000000000000000000000000001111)
+
+State 242 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  zero_array={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 243 file Verif.c line 43 function verifDc_Dc thread 0
+----------------------------------------------------
+  i=16ul (0000000000000000000000000000000000000000000000000000000000010000)
+
+State 248 file Verif.c line 44 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK={ FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE } ({ 0, 0, 0, 0, 0, 0, 0, 0 })
+
+State 249 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$2=FALSE (0)
+
+State 251 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$1=0 (00000000000000000000000000000000)
+
+State 253 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 254 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 255 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 256 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 257 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 258 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=12ul (0000000000000000000000000000000000000000000000000000000000001100)
+
+State 259 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 260 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 261 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 262 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 263 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 265 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 266 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 267 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 268 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 269 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 270 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 1 (0000001100000000000000000000000000000000000000000000000000000001)
+
+State 271 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 273 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=11ul (0000000000000000000000000000000000000000000000000000000000001011)
+
+State 276 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 277 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 278 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 279 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 280 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 1 (0000001100000000000000000000000000000000000000000000000000000001)
+
+State 281 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 2 (0000001100000000000000000000000000000000000000000000000000000010)
+
+State 282 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 284 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=10ul (0000000000000000000000000000000000000000000000000000000000001010)
+
+State 287 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 288 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 289 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 290 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 291 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 2 (0000001100000000000000000000000000000000000000000000000000000010)
+
+State 292 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 3 (0000001100000000000000000000000000000000000000000000000000000011)
+
+State 293 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 295 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=9ul (0000000000000000000000000000000000000000000000000000000000001001)
+
+State 298 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 299 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 300 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 301 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 302 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 3 (0000001100000000000000000000000000000000000000000000000000000011)
+
+State 303 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 4 (0000001100000000000000000000000000000000000000000000000000000100)
+
+State 304 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 306 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=8ul (0000000000000000000000000000000000000000000000000000000000001000)
+
+State 309 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 310 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 311 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 312 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 313 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 4 (0000001100000000000000000000000000000000000000000000000000000100)
+
+State 314 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 5 (0000001100000000000000000000000000000000000000000000000000000101)
+
+State 315 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 317 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=7ul (0000000000000000000000000000000000000000000000000000000000000111)
+
+State 320 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 321 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 322 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 323 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 324 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 5 (0000001100000000000000000000000000000000000000000000000000000101)
+
+State 325 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 6 (0000001100000000000000000000000000000000000000000000000000000110)
+
+State 326 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 328 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=6ul (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 331 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 332 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 333 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 334 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 335 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 6 (0000001100000000000000000000000000000000000000000000000000000110)
+
+State 336 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 7 (0000001100000000000000000000000000000000000000000000000000000111)
+
+State 337 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 339 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=5ul (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 342 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 343 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 344 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 8 (0000010100000000000000000000000000000000000000000000000000001000)
+
+State 345 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 346 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 7 (0000001100000000000000000000000000000000000000000000000000000111)
+
+State 347 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 8 (0000001100000000000000000000000000000000000000000000000000001000)
+
+State 348 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 350 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=4ul (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 353 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 354 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 8 (0000010100000000000000000000000000000000000000000000000000001000)
+
+State 355 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 9 (0000010100000000000000000000000000000000000000000000000000001001)
+
+State 356 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 357 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 8 (0000001100000000000000000000000000000000000000000000000000001000)
+
+State 358 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 9 (0000001100000000000000000000000000000000000000000000000000001001)
+
+State 359 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 361 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 364 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 365 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 9 (0000010100000000000000000000000000000000000000000000000000001001)
+
+State 366 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 10 (0000010100000000000000000000000000000000000000000000000000001010)
+
+State 367 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 368 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 9 (0000001100000000000000000000000000000000000000000000000000001001)
+
+State 369 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 10 (0000001100000000000000000000000000000000000000000000000000001010)
+
+State 370 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 372 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 375 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 376 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 10 (0000010100000000000000000000000000000000000000000000000000001010)
+
+State 377 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 11 (0000010100000000000000000000000000000000000000000000000000001011)
+
+State 378 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 379 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 10 (0000001100000000000000000000000000000000000000000000000000001010)
+
+State 380 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 11 (0000001100000000000000000000000000000000000000000000000000001011)
+
+State 381 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 383 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 386 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 387 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 11 (0000010100000000000000000000000000000000000000000000000000001011)
+
+State 388 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 12 (0000010100000000000000000000000000000000000000000000000000001100)
+
+State 389 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 390 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 11 (0000001100000000000000000000000000000000000000000000000000001011)
+
+State 391 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 12 (0000001100000000000000000000000000000000000000000000000000001100)
+
+State 392 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 394 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 397 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$1=0 (00000000000000000000000000000000)
+
+State 400 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$2=TRUE (1)
+
+State 402 file Verif.c line 46 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[0l]=TRUE (1)
+
+State 403 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$4=FALSE (0)
+
+State 405 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$3=0 (00000000000000000000000000000000)
+
+State 407 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 408 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 409 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 410 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 411 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 412 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=12ul (0000000000000000000000000000000000000000000000000000000000001100)
+
+State 413 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 414 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 415 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 416 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 417 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 419 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 420 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 421 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 422 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 423 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 424 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 1 (0000001100000000000000000000000000000000000000000000000000000001)
+
+State 425 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 427 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=11ul (0000000000000000000000000000000000000000000000000000000000001011)
+
+State 430 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 431 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 432 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 433 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 434 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 1 (0000001100000000000000000000000000000000000000000000000000000001)
+
+State 435 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 2 (0000001100000000000000000000000000000000000000000000000000000010)
+
+State 436 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 438 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=10ul (0000000000000000000000000000000000000000000000000000000000001010)
+
+State 441 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 442 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 443 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 444 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 445 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 2 (0000001100000000000000000000000000000000000000000000000000000010)
+
+State 446 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 3 (0000001100000000000000000000000000000000000000000000000000000011)
+
+State 447 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 449 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=9ul (0000000000000000000000000000000000000000000000000000000000001001)
+
+State 452 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 453 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 454 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 455 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 456 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 3 (0000001100000000000000000000000000000000000000000000000000000011)
+
+State 457 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 4 (0000001100000000000000000000000000000000000000000000000000000100)
+
+State 458 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 460 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=8ul (0000000000000000000000000000000000000000000000000000000000001000)
+
+State 463 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 464 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 465 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 466 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 467 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 4 (0000001100000000000000000000000000000000000000000000000000000100)
+
+State 468 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 5 (0000001100000000000000000000000000000000000000000000000000000101)
+
+State 469 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 471 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=7ul (0000000000000000000000000000000000000000000000000000000000000111)
+
+State 474 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 475 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 476 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 477 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 478 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 5 (0000001100000000000000000000000000000000000000000000000000000101)
+
+State 479 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 6 (0000001100000000000000000000000000000000000000000000000000000110)
+
+State 480 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 482 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=6ul (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 485 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 486 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 487 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 488 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 489 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 6 (0000001100000000000000000000000000000000000000000000000000000110)
+
+State 490 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 7 (0000001100000000000000000000000000000000000000000000000000000111)
+
+State 491 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 493 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=5ul (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 496 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 497 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 498 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 8 (0000010100000000000000000000000000000000000000000000000000001000)
+
+State 499 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 500 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 7 (0000001100000000000000000000000000000000000000000000000000000111)
+
+State 501 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 8 (0000001100000000000000000000000000000000000000000000000000001000)
+
+State 502 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 504 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=4ul (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 507 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 508 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 8 (0000010100000000000000000000000000000000000000000000000000001000)
+
+State 509 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 9 (0000010100000000000000000000000000000000000000000000000000001001)
+
+State 510 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 511 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 8 (0000001100000000000000000000000000000000000000000000000000001000)
+
+State 512 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 9 (0000001100000000000000000000000000000000000000000000000000001001)
+
+State 513 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 515 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=3ul (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 518 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 519 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 9 (0000010100000000000000000000000000000000000000000000000000001001)
+
+State 520 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 10 (0000010100000000000000000000000000000000000000000000000000001010)
+
+State 521 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 522 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 9 (0000001100000000000000000000000000000000000000000000000000001001)
+
+State 523 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 10 (0000001100000000000000000000000000000000000000000000000000001010)
+
+State 524 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 526 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=2ul (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 529 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 530 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 10 (0000010100000000000000000000000000000000000000000000000000001010)
+
+State 531 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 11 (0000010100000000000000000000000000000000000000000000000000001011)
+
+State 532 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 533 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 10 (0000001100000000000000000000000000000000000000000000000000001010)
+
+State 534 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 11 (0000001100000000000000000000000000000000000000000000000000001011)
+
+State 535 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 537 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=1ul (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 540 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 541 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 11 (0000010100000000000000000000000000000000000000000000000000001011)
+
+State 542 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 12 (0000010100000000000000000000000000000000000000000000000000001100)
+
+State 543 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 544 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf + 11 (0000001100000000000000000000000000000000000000000000000000001011)
+
+State 545 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf + 12 (0000001100000000000000000000000000000000000000000000000000001100)
+
+State 546 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 548 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 551 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$3=0 (00000000000000000000000000000000)
+
+State 554 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$4=FALSE (0)
+
+State 556 file Verif.c line 47 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[1l]=FALSE (0)
+
+State 557 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$6=FALSE (0)
+
+State 559 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$5=0 (00000000000000000000000000000000)
+
+State 561 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 562 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 563 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 564 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 565 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 566 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=12ul (0000000000000000000000000000000000000000000000000000000000001100)
+
+State 567 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 568 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 569 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 570 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 571 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 573 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 574 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 575 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 576 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 577 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 578 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 1 (0000010000000000000000000000000000000000000000000000000000000001)
+
+State 579 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 581 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=11ul (0000000000000000000000000000000000000000000000000000000000001011)
+
+State 584 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 585 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 586 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 587 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 588 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 1 (0000010000000000000000000000000000000000000000000000000000000001)
+
+State 589 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 2 (0000010000000000000000000000000000000000000000000000000000000010)
+
+State 590 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 592 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=10ul (0000000000000000000000000000000000000000000000000000000000001010)
+
+State 595 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 596 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 597 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 598 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 599 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 2 (0000010000000000000000000000000000000000000000000000000000000010)
+
+State 600 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 3 (0000010000000000000000000000000000000000000000000000000000000011)
+
+State 601 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 603 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=9ul (0000000000000000000000000000000000000000000000000000000000001001)
+
+State 606 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 607 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 608 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 609 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 610 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 3 (0000010000000000000000000000000000000000000000000000000000000011)
+
+State 611 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 4 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 612 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 614 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=8ul (0000000000000000000000000000000000000000000000000000000000001000)
+
+State 617 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 618 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 619 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 620 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 621 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 4 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 622 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 5 (0000010000000000000000000000000000000000000000000000000000000101)
+
+State 623 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 625 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=7ul (0000000000000000000000000000000000000000000000000000000000000111)
+
+State 628 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 629 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 630 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 631 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 632 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 5 (0000010000000000000000000000000000000000000000000000000000000101)
+
+State 633 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 6 (0000010000000000000000000000000000000000000000000000000000000110)
+
+State 634 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 636 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=6ul (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 639 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 640 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 641 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 642 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 643 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 6 (0000010000000000000000000000000000000000000000000000000000000110)
+
+State 644 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 7 (0000010000000000000000000000000000000000000000000000000000000111)
+
+State 645 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=-128 (11111111111111111111111110000000)
+
+State 647 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$5=-128 (11111111111111111111111110000000)
+
+State 650 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$6=FALSE (0)
+
+State 652 file Verif.c line 49 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[2l]=FALSE (0)
+
+State 653 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$8=FALSE (0)
+
+State 655 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$7=0 (00000000000000000000000000000000)
+
+State 657 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 658 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  s1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 659 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 660 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  s2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 661 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=0ul (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 662 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=12ul (0000000000000000000000000000000000000000000000000000000000001100)
+
+State 663 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 664 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 665 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 666 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 667 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 669 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 670 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 671 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 672 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 673 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 674 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 1 (0000010000000000000000000000000000000000000000000000000000000001)
+
+State 675 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 677 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=11ul (0000000000000000000000000000000000000000000000000000000000001011)
+
+State 680 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 681 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 1 (0000010100000000000000000000000000000000000000000000000000000001)
+
+State 682 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 683 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 684 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 1 (0000010000000000000000000000000000000000000000000000000000000001)
+
+State 685 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 2 (0000010000000000000000000000000000000000000000000000000000000010)
+
+State 686 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 688 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=10ul (0000000000000000000000000000000000000000000000000000000000001010)
+
+State 691 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 692 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 2 (0000010100000000000000000000000000000000000000000000000000000010)
+
+State 693 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 694 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 695 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 2 (0000010000000000000000000000000000000000000000000000000000000010)
+
+State 696 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 3 (0000010000000000000000000000000000000000000000000000000000000011)
+
+State 697 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 699 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=9ul (0000000000000000000000000000000000000000000000000000000000001001)
+
+State 702 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 703 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 3 (0000010100000000000000000000000000000000000000000000000000000011)
+
+State 704 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 705 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 706 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 3 (0000010000000000000000000000000000000000000000000000000000000011)
+
+State 707 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 4 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 708 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 710 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=8ul (0000000000000000000000000000000000000000000000000000000000001000)
+
+State 713 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 714 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 4 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 715 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 716 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 717 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 4 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 718 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 5 (0000010000000000000000000000000000000000000000000000000000000101)
+
+State 719 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 721 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=7ul (0000000000000000000000000000000000000000000000000000000000000111)
+
+State 724 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 725 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 5 (0000010100000000000000000000000000000000000000000000000000000101)
+
+State 726 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 727 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 728 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 5 (0000010000000000000000000000000000000000000000000000000000000101)
+
+State 729 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 6 (0000010000000000000000000000000000000000000000000000000000000110)
+
+State 730 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=0 (00000000000000000000000000000000)
+
+State 732 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  n=6ul (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 735 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 736 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$1=zero_array!0@1 + 6 (0000010100000000000000000000000000000000000000000000000000000110)
+
+State 737 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc1=zero_array!0@1 + 7 (0000010100000000000000000000000000000000000000000000000000000111)
+
+State 738 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=((const unsigned char *)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 739 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_post$2=survstatbuf2 + 6 (0000010000000000000000000000000000000000000000000000000000000110)
+
+State 740 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  sc2=survstatbuf2 + 7 (0000010000000000000000000000000000000000000000000000000000000111)
+
+State 741 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  res=-128 (11111111111111111111111110000000)
+
+State 743 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  return_value_memcmp$7=-128 (11111111111111111111111110000000)
+
+State 746 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$8=TRUE (1)
+
+State 748 file Verif.c line 50 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[3l]=TRUE (1)
+
+State 749 file Verif.c line 52 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$10=FALSE (0)
+
+State 751 file Verif.c line 52 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$10=FALSE (0)
+
+State 752 file Verif.c line 52 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[4l]=FALSE (0)
+
+State 753 file Verif.c line 53 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$12=FALSE (0)
+
+State 755 file Verif.c line 53 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$12=FALSE (0)
+
+State 756 file Verif.c line 53 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[5l]=FALSE (0)
+
+State 757 file Verif.c line 55 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$14=FALSE (0)
+
+State 759 file Verif.c line 55 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$14=FALSE (0)
+
+State 760 file Verif.c line 55 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[6l]=FALSE (0)
+
+State 761 file Verif.c line 56 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$16=FALSE (0)
+
+State 763 file Verif.c line 56 function verifDc_Dc thread 0
+----------------------------------------------------
+  tmp_if_expr$16=FALSE (0)
+
+State 764 file Verif.c line 56 function verifDc_Dc thread 0
+----------------------------------------------------
+  OK[7l]=FALSE (0)
+
+Violated property:
+  file Verif.c line 64 function verifDc_Dc
+  Hey OK3 fails
+  !OK[(signed long int)3] ? TRUE : ((signed int)StdbyDC_DC == 1 ? TRUE : FALSE)
+
+VERIFICATION FAILED

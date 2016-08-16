@@ -1,0 +1,708 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: diag320.pstex
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Thu Sep 29 11:18:31 2005
+%%For: pallab@localhost.localdomain ()
+%%BoundingBox: 0 0 605 575
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 575 moveto 0 0 lineto 605 0 lineto 605 575 lineto closepath clip newpath
+-22.9 592.9 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Helvetica-Bold /Helvetica-Bold-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% Polyline
+7.500 slw
+n 1755 3300 m 2130 3300 l 2130 3600 l 1755 3600 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+1890 3540 m
+gs 1 -1 sc (0) col0 sh gr
+% Polyline
+n 2700 3300 m 3075 3300 l 3075 3600 l 2700 3600 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+2835 3540 m
+gs 1 -1 sc (1) col0 sh gr
+% Ellipse
+n 2253 1647 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+2178 1722 m
+gs 1 -1 sc (g1) col0 sh gr
+% Ellipse
+n 2643 2577 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 2160 1845 m
+ 1920 3300 l gs col0 s gr 
+% Polyline
+n 2730 2790 m
+ 2910 3300 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 2325 1845 m
+ 2565 2400 l gs col0 s gr  [] 0 sd
+% Polyline
+ [60] 0 sd
+n 2520 2745 m
+ 1935 3300 l gs col0 s gr  [] 0 sd
+% Polyline
+gs  clippath
+2220 1455 m 2280 1455 l 2280 1303 l 2250 1423 l 2220 1303 l cp
+eoclip
+n 2250 1095 m
+ 2250 1440 l gs col0 s gr gr
+
+% arrowhead
+n 2220 1303 m 2250 1423 l 2280 1303 l  col0 s
+/Helvetica-Bold-iso ff 210.00 scf sf
+2568 2652 m
+gs 1 -1 sc (g2) col0 sh gr
+% Polyline
+n 8255 5460 m 8630 5460 l 8630 5760 l 8255 5760 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+8390 5700 m
+gs 1 -1 sc (1) col0 sh gr
+% Polyline
+n 7145 5460 m 7520 5460 l 7520 5760 l 7145 5760 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+7280 5700 m
+gs 1 -1 sc (0) col0 sh gr
+% Ellipse
+n 8042 3132 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8492 3882 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8447 4812 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 7307 4857 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+ [60] 0 sd
+n 7940 3330 m
+ 7310 4635 l gs col0 s gr  [] 0 sd
+% Polyline
+n 8165 3315 m
+ 8375 3705 l gs col0 s gr 
+% Polyline
+n 8330 4005 m
+ 7310 4635 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 8480 4095 m
+ 8480 4620 l gs col0 s gr  [] 0 sd
+% Polyline
+ [60] 0 sd
+n 8285 4965 m
+ 7310 5460 l gs col0 s gr  [] 0 sd
+% Polyline
+n 7310 5070 m
+ 7310 5460 l gs col0 s gr 
+% Polyline
+n 8450 5025 m
+ 8450 5460 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 7475 4995 m
+ 8450 5460 l gs col0 s gr  [] 0 sd
+/Helvetica-Bold-iso ff 210.00 scf sf
+7967 3207 m
+gs 1 -1 sc (r2) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+8417 3957 m
+gs 1 -1 sc (g1) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+7157 4932 m
+gs 1 -1 sc (g2') col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+8297 4887 m
+gs 1 -1 sc (g2') col0 sh gr
+% Ellipse
+n 7298 1932 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+7133 1992 m
+gs 1 -1 sc (g1') col0 sh gr
+% Ellipse
+n 6188 1917 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+6023 1977 m
+gs 1 -1 sc (g1') col0 sh gr
+% Ellipse
+n 6725 1215 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+6650 1290 m
+gs 1 -1 sc (r1) col0 sh gr
+% Arc
+n 8402.7 3712.7 2068.9 -127.4 122.4 arcn
+gs col0 s gr
+
+% Arc
+ [60] 0 sd
+n 7580.1 3454.0 2043.2 -138.5 98.4 arcn
+gs col0 s gr
+ [] 0 sd
+% Polyline
+gs  clippath
+6690 1020 m 6750 1020 l 6750 868 l 6720 988 l 6690 868 l cp
+eoclip
+n 6720 570 m
+ 6720 1005 l gs col0 s gr gr
+
+% arrowhead
+n 6690 868 m 6720 988 l 6750 868 l  col0 s
+% Polyline
+n 6575 1350 m
+ 6275 1725 l gs col0 s gr 
+% Polyline
+n 6275 2100 m
+ 7280 4635 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 6875 1380 m
+ 7175 1755 l gs col0 s gr  [] 0 sd
+% Polyline
+ [60] 0 sd
+n 7430 2115 m
+ 7940 2955 l gs col0 s gr  [] 0 sd
+% Ellipse
+n 2153 6042 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+1988 6102 m
+gs 1 -1 sc (g1') col0 sh gr
+% Ellipse
+n 1043 6027 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+878 6087 m
+gs 1 -1 sc (g1') col0 sh gr
+% Ellipse
+n 1580 5325 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+1505 5400 m
+gs 1 -1 sc (r1) col0 sh gr
+% Polyline
+n 3110 9570 m 3485 9570 l 3485 9870 l 3110 9870 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+3245 9810 m
+gs 1 -1 sc (1) col0 sh gr
+% Polyline
+n 2000 9570 m 2375 9570 l 2375 9870 l 2000 9870 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+2135 9810 m
+gs 1 -1 sc (0) col0 sh gr
+% Ellipse
+n 3302 8922 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 2162 8967 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+ [60] 0 sd
+n 3140 9075 m
+ 2165 9570 l gs col0 s gr  [] 0 sd
+% Polyline
+n 2165 9180 m
+ 2165 9570 l gs col0 s gr 
+% Polyline
+n 3305 9135 m
+ 3305 9570 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 2330 9105 m
+ 3305 9570 l gs col0 s gr  [] 0 sd
+/Helvetica-Bold-iso ff 210.00 scf sf
+2012 9042 m
+gs 1 -1 sc (g2') col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+3152 8997 m
+gs 1 -1 sc (g2') col0 sh gr
+% Arc
+n 3257.7 7822.7 2068.9 -127.4 122.4 arcn
+gs col0 s gr
+
+% Arc
+ [60] 0 sd
+n 2435.1 7564.0 2043.2 -138.5 98.4 arcn
+gs col0 s gr
+ [] 0 sd
+% Ellipse
+n 2897 7242 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 3347 7992 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+gs  clippath
+1545 5130 m 1605 5130 l 1605 4978 l 1575 5098 l 1545 4978 l cp
+eoclip
+n 1575 4680 m
+ 1575 5115 l gs col0 s gr gr
+
+% arrowhead
+n 1545 4978 m 1575 5098 l 1605 4978 l  col0 s
+% Polyline
+n 1430 5460 m
+ 1130 5835 l gs col0 s gr 
+% Polyline
+n 1130 6210 m
+ 2135 8745 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 1730 5490 m
+ 2030 5865 l gs col0 s gr  [] 0 sd
+% Polyline
+ [60] 0 sd
+n 2285 6225 m
+ 2795 7065 l gs col0 s gr  [] 0 sd
+% Polyline
+ [60] 0 sd
+n 2795 7440 m
+ 2165 8745 l gs col0 s gr  [] 0 sd
+% Polyline
+n 3020 7425 m
+ 3230 7815 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 3335 8205 m
+ 3335 8730 l gs col0 s gr  [] 0 sd
+% Polyline
+n 3195 8145 m
+ 2160 9570 l gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+2822 7317 m
+gs 1 -1 sc (r2) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+3272 8067 m
+gs 1 -1 sc (g1) col0 sh gr
+% Polyline
+n 3135 5625 m 3030 5625 3030 6165 105 arcto 4 {pop} repeat
+  3030 6270 4560 6270 105 arcto 4 {pop} repeat
+  4665 6270 4665 5730 105 arcto 4 {pop} repeat
+  4665 5625 3135 5625 105 arcto 4 {pop} repeat
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+3300 5910 m
+gs 1 -1 sc (Existential) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+3300 6165 m
+gs 1 -1 sc (Abstraction) col0 sh gr
+% Polyline
+n 4281 9570 m 4656 9570 l 4656 9870 l 4281 9870 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+4416 9810 m
+gs 1 -1 sc (0) col0 sh gr
+% Polyline
+n 5046 9549 m 5421 9549 l 5421 9849 l 5046 9849 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+5181 9789 m
+gs 1 -1 sc (1) col0 sh gr
+% Ellipse
+n 4854 7836 213 213 0 360 DrawEllipse gs col0 s gr
+
+/Helvetica-Bold-iso ff 210.00 scf sf
+4689 7896 m
+gs 1 -1 sc (g1') col0 sh gr
+% Ellipse
+n 4443 8967 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 4446 9180 m
+ 4446 9570 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 4611 9105 m
+ 5241 9549 l gs col0 s gr  [] 0 sd
+% Polyline
+n 4836 8049 m
+ 4491 8769 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 4896 8049 m
+ 5241 9549 l gs col0 s gr  [] 0 sd
+% Polyline
+gs  clippath
+4806 7659 m 4866 7659 l 4866 7507 l 4836 7627 l 4806 7507 l cp
+eoclip
+n 4836 7209 m
+ 4836 7644 l gs col0 s gr gr
+
+% arrowhead
+n 4806 7507 m 4836 7627 l 4866 7507 l  col0 s
+/Helvetica-Bold-iso ff 210.00 scf sf
+4293 9042 m
+gs 1 -1 sc (g2') col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+4455 7089 m
+gs 1 -1 sc (NS0-Temp) col0 sh gr
+% Polyline
+n 5670 7275 m 5565 7275 5565 7740 105 arcto 4 {pop} repeat
+  5565 7845 6645 7845 105 arcto 4 {pop} repeat
+  6750 7845 6750 7380 105 arcto 4 {pop} repeat
+  6750 7275 5670 7275 105 arcto 4 {pop} repeat
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+5760 7650 m
+gs 1 -1 sc (Rename) col0 sh gr
+% Polyline
+gs  clippath
+5580 7590 m 5580 7530 l 5428 7530 l 5548 7560 l 5428 7590 l cp
+eoclip
+n 5175 7560 m
+ 5565 7560 l gs col0 s gr gr
+
+% arrowhead
+n 5428 7590 m 5548 7560 l 5428 7530 l  col0 s
+% Polyline
+gs  clippath
+7080 7590 m 7080 7530 l 6928 7530 l 7048 7560 l 6928 7590 l cp
+eoclip
+n 6750 7560 m
+ 7065 7560 l gs col0 s gr gr
+
+% arrowhead
+n 6928 7590 m 7048 7560 l 6928 7530 l  col0 s
+% Polyline
+n 6861 9570 m 7236 9570 l 7236 9870 l 6861 9870 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+6996 9810 m
+gs 1 -1 sc (0) col0 sh gr
+% Polyline
+n 7626 9549 m 8001 9549 l 8001 9849 l 7626 9849 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+7761 9789 m
+gs 1 -1 sc (1) col0 sh gr
+% Ellipse
+n 7023 8967 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 7434 7836 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 7026 9180 m
+ 7026 9570 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 7191 9105 m
+ 7821 9549 l gs col0 s gr  [] 0 sd
+% Polyline
+n 7416 8049 m
+ 7071 8769 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 7476 8049 m
+ 7821 9549 l gs col0 s gr  [] 0 sd
+% Polyline
+gs  clippath
+7386 7659 m 7446 7659 l 7446 7507 l 7416 7627 l 7386 7507 l cp
+eoclip
+n 7416 7209 m
+ 7416 7644 l gs col0 s gr gr
+
+% arrowhead
+n 7386 7507 m 7416 7627 l 7446 7507 l  col0 s
+/Helvetica-Bold-iso ff 210.00 scf sf
+6873 9042 m
+gs 1 -1 sc (g2) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+7269 7896 m
+gs 1 -1 sc (g1) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+7290 7104 m
+gs 1 -1 sc (NS0) col0 sh gr
+% Polyline
+n 9096 9555 m 9471 9555 l 9471 9855 l 9096 9855 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+9231 9795 m
+gs 1 -1 sc (0) col0 sh gr
+% Polyline
+n 9861 9534 m 10236 9534 l 10236 9834 l 9861 9834 l
+ cp gs col0 s gr 
+/Helvetica-Bold-iso ff 210.00 scf sf
+9996 9774 m
+gs 1 -1 sc (1) col0 sh gr
+% Ellipse
+n 9258 8952 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 9669 7821 213 213 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 9261 9165 m
+ 9261 9555 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 9426 9090 m
+ 10056 9534 l gs col0 s gr  [] 0 sd
+% Polyline
+n 9651 8034 m
+ 9306 8754 l gs col0 s gr 
+% Polyline
+ [60] 0 sd
+n 9711 8034 m
+ 10056 9534 l gs col0 s gr  [] 0 sd
+% Polyline
+gs  clippath
+9621 7644 m 9681 7644 l 9681 7492 l 9651 7612 l 9621 7492 l cp
+eoclip
+n 9651 7194 m
+ 9651 7629 l gs col0 s gr gr
+
+% arrowhead
+n 9621 7492 m 9651 7612 l 9681 7492 l  col0 s
+/Helvetica-Bold-iso ff 210.00 scf sf
+9108 9027 m
+gs 1 -1 sc (g2) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+9504 7881 m
+gs 1 -1 sc (g1) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+8685 7104 m
+gs 1 -1 sc (S1=OR\(S0, NS0\)) col0 sh gr
+% Polyline
+gs  clippath
+4266 2642 m 4306 2597 l 4193 2496 l 4263 2599 l 4153 2541 l cp
+eoclip
+n 3195 1650 m
+ 4275 2610 l gs col0 s gr gr
+
+% arrowhead
+n 4153 2541 m 4263 2599 l 4193 2496 l  col0 s
+% Polyline
+gs  clippath
+4438 2599 m 4481 2641 l 4587 2532 l 4482 2598 l 4544 2490 l cp
+eoclip
+n 5460 1590 m
+ 4470 2610 l gs col0 s gr gr
+
+% arrowhead
+n 4544 2490 m 4482 2598 l 4587 2532 l  col0 s
+% Polyline
+gs  clippath
+2577 4911 m 2622 4951 l 2723 4839 l 2621 4908 l 2679 4798 l cp
+eoclip
+n 4305 3045 m
+ 2610 4920 l gs col0 s gr gr
+
+% arrowhead
+n 2679 4798 m 2621 4908 l 2723 4839 l  col0 s
+% Polyline
+gs  clippath
+3054 5688 m 3089 5639 l 2968 5549 l 3047 5645 l 2932 5597 l cp
+eoclip
+n 2370 5145 m
+ 3060 5655 l gs col0 s gr gr
+
+% arrowhead
+n 2932 5597 m 3047 5645 l 2968 5549 l  col0 s
+% Polyline
+gs  clippath
+4362 6843 m 4393 6791 l 4263 6713 l 4351 6801 l 4232 6764 l cp
+eoclip
+n 3465 6270 m
+ 4365 6810 l gs col0 s gr gr
+
+% arrowhead
+n 4232 6764 m 4351 6801 l 4263 6713 l  col0 s
+% Polyline
+gs  clippath
+8085 7620 m 8085 7560 l 7933 7560 l 8053 7590 l 7933 7620 l cp
+eoclip
+n 7680 7590 m
+ 8070 7590 l gs col0 s gr gr
+
+% arrowhead
+n 7933 7620 m 8053 7590 l 7933 7560 l  col0 s
+% Polyline
+n 8175 7290 m 8070 7290 8070 7770 105 arcto 4 {pop} repeat
+  8070 7875 8895 7875 105 arcto 4 {pop} repeat
+  9000 7875 9000 7395 105 arcto 4 {pop} repeat
+  9000 7290 8175 7290 105 arcto 4 {pop} repeat
+ cp gs col0 s gr 
+% Polyline
+gs  clippath
+9345 7635 m 9345 7575 l 9193 7575 l 9313 7605 l 9193 7635 l cp
+eoclip
+n 9015 7605 m
+ 9330 7605 l gs col0 s gr gr
+
+% arrowhead
+n 9193 7635 m 9313 7605 l 9193 7575 l  col0 s
+% Polyline
+n 3825 2610 m 3720 2610 3720 2955 105 arcto 4 {pop} repeat
+  3720 3060 5085 3060 105 arcto 4 {pop} repeat
+  5190 3060 5190 2715 105 arcto 4 {pop} repeat
+  5190 2610 3825 2610 105 arcto 4 {pop} repeat
+ cp gs col0 s gr 
+% Polyline
+gs  clippath
+8513 7322 m 8550 7275 l 8430 7183 l 8507 7280 l 8393 7230 l cp
+eoclip
+n 3255 3255 m
+ 8520 7290 l gs col0 s gr gr
+
+% arrowhead
+n 8393 7230 m 8507 7280 l 8430 7183 l  col0 s
+/Helvetica-Bold-iso ff 210.00 scf sf
+5655 480 m
+gs 1 -1 sc (Transition relation: R) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+2130 1020 m
+gs 1 -1 sc (S0) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+990 4575 m
+gs 1 -1 sc (AND\(S0, R\)) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+8265 7680 m
+gs 1 -1 sc (Union) col0 sh gr
+/Helvetica-Bold-iso ff 210.00 scf sf
+3930 2925 m
+gs 1 -1 sc (Intersect) col0 sh gr
+$F2psEnd
+rs

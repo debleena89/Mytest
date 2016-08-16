@@ -1,0 +1,4 @@
+
+int x;
+assert(x == 5);
+

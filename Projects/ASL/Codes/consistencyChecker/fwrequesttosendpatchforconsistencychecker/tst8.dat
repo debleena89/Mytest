@@ -1,0 +1,7 @@
+
+  unsigned int a , b ;
+
+   assume (a = 0110 1101 1011 0111);
+
+  assert ( b = a ^ 0xff); // exclusive or
+ 

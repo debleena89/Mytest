@@ -1,0 +1,4 @@
+(define Flag::int)
+(assert(> Flag 1))
+(assert(/= Flag 1))
+(!= Flag 2)

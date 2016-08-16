@@ -1,0 +1,16 @@
+
+int a, b;
+
+assert (a >= 6);
+
+assert (a <= 10 );
+assert (b >= 6);
+
+assert (b <= 10 );
+
+
+
+assert((a + b) >= 25);
+
+
+

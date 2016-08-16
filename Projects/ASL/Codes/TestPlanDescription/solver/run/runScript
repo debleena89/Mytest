@@ -1,0 +1,14 @@
+#/bin/tcsh
+
+set testCase = $argv[1]
+echo TestCaseName: $testCase
+
+cd ..
+make -s
+cd run
+
+../consChecker $testCase > t.ys
+../yices t.ys > logFile
+
+echo "Your assertions are" `cat logFile`
+rm -rf t.ys logFile

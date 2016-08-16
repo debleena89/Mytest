@@ -1,0 +1,9 @@
+
+  #define PS1_M 12
+  #define PS1_S 13
+
+  int j , pschno;
+  assume(pschno == 0);
+  assume(j == 0);
+
+  assert( pschno = j ? PS1_S : PS1_M); 

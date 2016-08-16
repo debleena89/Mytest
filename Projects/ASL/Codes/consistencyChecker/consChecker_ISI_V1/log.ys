@@ -1,0 +1,6 @@
+(define a::(bitvector 4))
+(define b::(bitvector 4))
+ 
+(assert (= a 0001))
+(assert (= (bv-xor a b) b))
+(check)

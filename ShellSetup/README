@@ -1,0 +1,43 @@
+# README file for ShellSetup installation
+
+Installation:
+=============
+
+1.  Logon to your host Unix or Linux machine (note, display will be set to
+    to this machine).
+
+2.  Untar ShellSetup.tgz file in your home, i.e.
+        cd; /usr/local/bin/tar xvfz ShellSetup.tgz
+
+3.  Run installer to install ShellSetup.
+		ShellSetup/Install.csh <optional display>
+
+4.  Source ~/.cshrc
+
+
+
+Manual Installation:
+--------------------
+
+1.  Untar ShellSetup.tgz file in your home, i.e.
+        cd; /usr/local/bin/tar xvfz ShellSetup.tgz
+
+2.  Move the personal setup file ShellSetup/Setup.whoami.csh
+    to ShellSetup/Setup.`whoami`.csh i.e.
+        mv ShellSetup/Setup.whoami.csh ShellSetup/Setup.`whoami`.csh
+
+3.  Edit ShellSetup/Setup.`whoami`.csh for personal setups.
+
+4.  Move the existing ~/.cshrc to ~/.cshrc.backup
+        mv ~/.cshrc ~/.cshrc.backup
+
+5.  Link the ShellSetup/Cshrc.link.csh to ~/.cshrc, i.e.
+        ln -s ~/ShellSetup/Cshrc.link.csh ~/.cshrc
+
+6.  Source ~/.cshrc
+
+7.  Also link ShellSetup/ToolSetup/VimRc.link to ~/.vimrc and
+    ShellSetup/ToolSetup/RHosts.link to ~/.rhosts
+		ln -s ShellSetup/ToolSetup/VimRc.link ~/.vimrc
+		ln -s ShellSetup/ToolSetup/RHosts.link ~/.rhosts
+

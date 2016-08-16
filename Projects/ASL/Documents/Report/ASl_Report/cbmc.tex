@@ -1,0 +1,250 @@
+ \subsection{CBMC}
+ 
+ The bounded model checking Implementations fro C programs is CBMC developed 
+ at CMU. CBMC formally verifies ANSI-C programs and checked the properties of 
+ C including pointer safety, array bounds and user-provided assertions. As CBMC 
+ architecture is based on the BMC model,CBMC forms a transition relation for a
+ complex state  machine  with its specifications are unwound to reduce a boolean
+ formula which is then fed to a SAT solver. The SAT solver checks for the counter
+ example where the specifications contradicts with the boolean formula 
+ implementations. If no such counter example obtained within the data type range 
+ bound then the  verification  is successful otherwise a counterexample showing 
+ the trace of  states with violating specifications is depicted.
+ 
+ 
+ CBMC behaves like a compiler and takes .c files on the command line. Then like a 
+ linker merges the function definition from various .c files and performs symbolic 
+ simulation on the program.
+ Let us consider the following C program, named Test1.c
+ \begin{verbatim}
+   #include <stdio.h>
+ 
+ int main()
+ {
+   int a[4] = {1, 2, 3, 4, 5};
+   
+    printf("%d", a[3]);
+ }
+ \end{verbatim}
+
+Now we can run this program using CBMC in the following way.
+
+cbmc Test1.c
+
+CBMC transforms this design into CNF and passes it to a SAT solver.
+If SAT solver detects that the design is not valid then there is a bug in the 
+program. Then it prints a counterexample that shows a trace where the property 
+is violated. In the above code, cbmc will show that verification is successful
+ and if it was not successful it would show us a counterexample.
+ 
+ \textbf{Verifying Modules}
+ 
+ Generally programs starts with main function but in embedded software, there are
+ different entry points in the program.. Consider the following code
+  \begin{verbatim}
+   #include <stdio.h>
+ 
+ int main()
+ {   
+ }
+ 
+ int product()
+ {
+ }
+ \end{verbatim}
+ 
+ Here is a main functions and one sub function product. we want to set entry point 
+ to the product function, then we can write
+ 
+ cbmc Test2.c --function product
+ 
+ \textbf{Loop Unwinding}
+ 
+ CBMC unwinds the loop. As CBMC follows Bounded Model Checking architecture, all
+ loops are unwinds upto certain depth, within which it guarantees that all bugs 
+ are found. Consider the following code, Prime.c :
+ 
+ \begin{verbatim}
+  int prime()
+  {
+     int i = 2;
+    while(1)
+    {
+       checkPrime(i);
+        i = i + 1;
+    }
+  }
+ \end{verbatim}
+
+ CBMC cannot stop unwinding this design. the built-in simplifier cannot determine
+ the upper bound to stop. But the unwinding bound can be given as the command line
+ argument:
+ 
+ cbmc prime.c --function prime --unwind 8 --decide
+ 
+ \textbf{Basic data types}
+ 
+ CBMC supports the scalar data types including Bool. CBMC allows int 32 bits
+ wide, short int 16 bit wides and char is 8 bits wide.  Char is by default 
+ signed but using a  command line options char an be changed  to unsigned. 
+ CBMC also supports floating point data types like float, double  and long double.
+ CBMC uses fixed point representation for floating point type.  By default float 
+ is 32 bits wide, double and long double are 64 bits wide. \\
+ 
+\textbf{ Operators:}  \\
+ 
+ \textbf{Bololean operators} \\
+ 
+ Cbmc supports and, or,  not boolean operators. \\
+ 
+ \textbf{Integer Arithmetic Operators} \\
+ 
+ CBMC supports all integer Arithmetic operators. Cbmc also checks Arithmetic 
+ overflow  in case of signed operands and division by zero for division and 
+ remainder operators. \\
+ 
+ \textbf{Floating Point Arithmetic operators} 
+ 
+ cbmc supports addition, subtraction, multiplication and relational operations
+ on float, double and long double variables. \\
+ 
+ \textbf{Type casts}
+ 
+ CBMC supports Arithmetic type casts. For unsigned data types overflow is not 
+ checked but for signed data types the overflow condition is checked. \\
+ 
+ \textbf{Control Flow Statement}
+ 
+ CBMC supports the use of all conditional Statement as supported by ANSI-C standard.
+ CBMC checks that a function having non-void return type must return a value 
+ according to the return type . \\
+ 
+ \textbf{NON-Determinism}
+ 
+ CBMC supports non-deterministic choice of functions and is defined them with 
+ the prefix nondet. For example,
+ \begin{verbatim}
+  int nondet_int();
+ \end{verbatim}
+
+This statements enable cbmc to return any non-deterministically taken int value.
+CBMC exhaustively checks all int value from this nondeterministic set. \\
+
+
+\textbf{Assumptions and Assertions}
+
+ CBMC assumptions restricts the program traces that follows the assumptions.
+ It takes boolean expression Consider the following example
+ 
+ \begin{verbatim}
+  int eval = nondet_int();
+  
+  __CPROVER_assume(eval > 1 && eval <= 100);
+ \end{verbatim}
+ In the course of execution only the value of eval will be between 1 to 100.
+ 
+ The assert statement also takes boolean Statement and CBMC checks whether this
+ condition is true for each run of the designed code. If the condition is true 
+ for each runs then only the assertions can pass. Consider the following example:
+ 
+\begin{verbatim}
+  int eval = nondet_int();
+  
+  __CPROVER_assume(eval == 110);
+  assert(eval > 50);
+ \end{verbatim}
+ 
+The above assertion will pass but the following example
+
+\begin{verbatim}
+  int eval = nondet_int();
+  
+  __CPROVER_assume(eval == 10);
+  assert(eval > 50);
+ \end{verbatim}
+ 
+Will fail as there is no such path that satisfies this property.
+
+When using the assume statement, it is ensured that at least one program trace 
+is supported by this assume conditions but when we use assert we want to establish
+that the property is true for each program trace. \\
+ 
+ \textbf{Arrays}
+ 
+ CBMC supports Arrays as defined by the ANSI-C standard including multidimensional
+ and dynamically allocated array. CBMC checks for upper bound and lower bound of
+ the array to warn the occurrence of  overflow and underflow condition.
+ 
+ Apart from this cases CBMC supports many more features as shown in the following table.
+ 
+ \begin{center}
+
+\begin{tabular}{|| c | c ||}
+
+\hline
+
+OPTION & DESCRIPTION  \\ [0.5ex]
+
+\hline
+\hline
+$\textendash$ $\textendash$show$\textendash$parse$\textendash$tree     &       show parse tree \\
+\hline
+$\textendash$ $\textendash$show$\textendash$symbol$\textendash$table    &      show symbol table \\
+\hline
+$\textendash$ $\textendash$show$\textendash$goto$\textendash$functions   &     show goto program \\
+\hline
+$\textendash$ $\textendash$bounds$\textendash$check    &           enable array bounds checks \\
+\hline
+$\textendash$ $\textendash$div$\textendash$by$\textendash$zero$\textendash$check     &     enable division by zero checks \\
+\hline
+$\textendash$ $\textendash$pointer$\textendash$check         &     enable pointer checks \\  
+\hline
+$\textendash$ $\textendash$memory$\textendash$leak$\textendash$check      &    enable memory leak checks \\
+\hline\hline
+$\textendash$ $\textendash$signed$\textendash$overflow$\textendash$check   &   enable arithmetic over$\textendash$ and underflow checks \\
+\hline
+$\textendash$ $\textendash$unsigned$\textendash$overflow$\textendash$check  &  enable arithmetic over$\textendash$ and underflow checks \\
+\hline
+$\textendash$ $\textendash$float$\textendash$overflow$\textendash$check      & check floating-point for +/-Inf \\
+\hline
+$\textendash$ $\textendash$nan$\textendash$check               &   check floating$\textendash$point for NaN \\
+\hline
+$\textendash$ $\textendash$no$\textendash$assertions           &   ignore user assertions \\
+\hline
+$\textendash$ $\textendash$no$\textendash$assumptions          &   ignore user assumptions \\
+\hline
+$\textendash$ $\textendash$error$\textendash$label label       &   check that label is unreachable \\
+\hline
+$\textendash$ $\textendash$cover CC                &   create test-suite with coverage criterion CC \\
+\hline
+$\textendash$ $\textendash$mm MM                   &   memory consistency model for concurrent programs \\
+\hline
+$\textendash$ $\textendash$function name         &     set main function name \\
+\hline
+$\textendash$ $\textendash$property id           &     only check one specific property \\
+\hline
+$\textendash$ $\textendash$program$\textendash$only          &     only show program expression \\
+\hline
+$\textendash$ $\textendash$show$\textendash$loops            &     show the loops in the program \\
+\hline
+$\textendash$ $\textendash$depth nr              &     limit search depth \\
+\hline
+$\textendash$ $\textendash$unwind nr             &     unwind nr times \\
+\hline
+$\textendash$ $\textendash$unwindset L:B,...     &     unwind loop L with a bound of B
+                                                       (use --show-loops to get the loop IDs) \\
+\hline                        
+$\textendash$ $\textendash$show$\textendash$vcc               &    show the verification conditions \\
+\hline
+$\textendash$ $\textendash$slice$\textendash$formula         &     remove assignments unrelated to property \\
+\hline
+$\textendash$ $\textendash$unwinding$\textendash$assertions   &    generate unwinding assertions \\
+\hline
+$\textendash$ $\textendash$partial$\textendash$loops          &    permit paths with partial loops \\
+
+\hline
+
+\end{tabular}
+
+\end{center}
+ 

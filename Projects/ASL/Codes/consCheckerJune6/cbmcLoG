@@ -1,0 +1,28 @@
+CBMC version 5.4 64-bit x86_64 linux
+Parsing outFile.c
+Converting
+Type-checking outFile
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Instrumenting coverge goals
+Starting Bounded Model Checking
+size of program expression: 34 steps
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Aiming to cover 1 goal(s)
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 with simplifier
+782 variables, 2761 clauses
+SAT checker: instance is SATISFIABLE
+Covered Hello
+Runtime decision procedure: 0.004s
+
+** coverage results:
+[main.assertion.1] file outFile.c line 13 function main Hello: SATISFIED
+
+** 1 of 1 covered (100.0%), using 1 iteration

@@ -1,0 +1,11 @@
+
+int a, b;
+
+assert (a >= 6);
+
+assert(b >= 5);
+
+assert((a + b) <= 10);
+
+
+

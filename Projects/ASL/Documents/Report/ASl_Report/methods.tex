@@ -1,0 +1,213 @@
+\section{Methods for Software Verification}
+
+\subsection{Theorem Proving}
+
+When we want to write a program we want to get desired
+output from that program. Or when we have a program we want to know what will be 
+the output of this program. Taking some considered value we go through the code
+and come to some conclusion. Now how we can we understand that our inferred result
+is correct or not. Or for any possible inputs, the outputs can be predicted.
+Suppose If I have a code to make square of some Integer non negative number ,
+we can say that for any non-negative integer value the output will be the 
+square of the input number. So there are techniques called theorem prover
+that says how to prove a computer program.
+
+
+By using Theorem prover we want to have 
+a mathematical proof of  an expression. This expression is called 
+conjecture and stated in formal language. To prove such an 
+expression we need to have Axioms and Inference rules. Axioms are
+conjecture which are considered to be true. Inference rules says that if I have
+fact1, fact2..factn to be true then we can infer New fact from them.
+
+For example
+
+\begin{verbatim}
+ a * (b * c) = (a * b) * c : Axioms
+ 
+ a * e = b * e : Inference Rules
+ 
+ then we can infer that  a = b.  : New Fact
+\end{verbatim}
+
+theorem prover works in the following way:
+
+a) we have a sets of axioms A
+
+b) Given a conjecture P.
+
+c) To prove whether A $\models$ P ,i.e. prove A $\cup$ ${\sim P}$ unsatisfiable
+
+A and P are written in formal language that is First Order language. Now the 
+derived formula is deduced by Inferring from the sequence of axioms. 
+As Axioms are true and valid and if the expression to prove can be 
+derived by inferring from the sequence of axioms is also valid.
+
+   we can precisely formulate this as HOARE TRIPLES where we have
+
+ 
+         {$S_o$} P {$S_final$}
+         
+  Where $S_0$ is the sets of initial condition \\
+        P can be an expression , function call or any block of code \\
+        $S_final$ gives the sets of the final result \\
+        
+In Hoar's calculus Axioms and Inference rules are used to derive $S_final$ based
+on the $S_0$ and P. $S_0$ and $S_final$ basically validates the program. If only P gets
+changed $S_final$ has to change but $S_0$ can remain unchanged. For different $S_0$ 
+initial condition for a particular P we will get different $S_final$. If $S_0$ kept
+same and P gets changed , we will get different $S_final$.
+
+\textbf{Application}
+
+Theorem prover was developed to help the Mathematicians. It can search equivalent
+theorem from a database of mathematical theorems. Moder application of theorem 
+prover can be in the field of hardware and software verification. Automated theorem
+provers can be applied in other field also like network security.
+          
+         
+
+\subsection{Software Model Checking}
+
+Software Model Checking is the algorithmic analysis of a program to determine
+if the statement of the program are correctly designed to give the expected 
+result. A computer program consists of some finite number of lines of code.
+Say if a program has n number of lines of code then it requires n number of
+program counter locations. Program counter stores the address of the instructions
+to be executed next. Valuation of the variables is called the states of the program.
+Now a model of a program  consists of the control flow of the program through the 
+combination of states and program counter. 
+Configuration transition graph describes how the state changes in course of the
+execution of the program. Each node gives a combination of state and program 
+counter. The edge depicts the movement from one state to another. Configuration
+graph must show every state of the program. The model checking algorithms 
+determines exhaustively the reachability of the states. If the graph has a finite
+number of configuration then it says that the program will terminate. consider 
+the following code :
+
+\begin{verbatim}
+
+1: x := 3;
+  
+2:  while(x >= 0)
+   
+3:     if(x >= 1) then 4: x := -5;
+     
+                else 5: x := 2;
+6:          
+     
+\end{verbatim}
+
+The configuration transition graph is depicted below
+
+\begin{verbatim}
+
+   <s,1> --> <x = 3, 2> --> <x = 3, 3> --> <x = 3, 4>
+   --> <x = -5, 5> --> <X = -5, 6>
+   
+\end{verbatim}
+
+
+If the configuration graph reaches such a state  where there is no instructions
+to execute then the program will terminate. If such a state is not reachable 
+then there will be infinite state transition.
+
+  Model checking tool checks for such reachable state. If the tool checks that 
+  this snippet of code is unable to produce expected result then it gives a 
+  counter example to illustrate a situation when such circumstance can occur.
+  model checking tool depicts an execution trace which says for which state 
+  configuration the program cannot produce expected result.
+  
+  \subsection{Bounded Model Checking}
+  
+\textbf{Background:}
+Bounded Model checking was first proposed by Biere et al in 1994. It follows
+the principle of model checking but upto a depth say k. So it is called bounded
+model checking. It explores the reachable states within that depth k. If a bug is
+found within K depth BMC gives a counterexample of the trace of the states. BMC
+cannot report if a bug could be present in greater than K depth. This depth value
+is called Completeness threshold beyond which BMC is unable to check.
+
+\textbf{Workings}
+BMC unwinds the path k times and formulate Linear Temporal Logic for each path. 
+It then checks whether there exists such a trace that contradicts them, gives 
+the counterexample. Such a trace is called witness for the property.
+
+We are considering here two path quantifiers E and A \\
+E denotes the expectation of correctness of the LTL formula over all the paths \\
+And \\
+A denotes the expectation of correctness of the LTL formula over some paths.
+
+M $\models$ Af means , M satisfies f  for all of the paths and M $\models$ Ef means there exist
+at least one path that satisfies f. The formula are presented in negated normal form(NNF).
+
+The basic idea of bounded model checking is to consider only a finite length of 
+the path, restricted to some bound k. Though the length of the path is finite, 
+it can represent an infinite path, if the back loop is present in the path from 
+the last state to any of its previous state. If  there is no such loop, then
+the path is finite within bound k.
+
+
+We call a path $\pi$, a k-loop if there exists  k $>=$ l $>=$ 0 , for which $\pi$ is a 
+(k,l) loop. Here, k loop signifies that, the semantics of model checking is 
+defined under bounded traces. In the bounded semantics, we consider a finite
+length of a path. Precisely we only explore first k$+$1 states ($S_0$,..$S_k$)of a path
+to establish the validity of the LTL formula along the path.
+
+\textbf{Bounded Semantics for a loop}
+
+Let k $>$ 0 and $\pi$ be a k-loop. Then  an LTL formula f is valid along the path 
+$\pi$ with bound k (in symbol $\pi$ $\models$ $\pi$k) iff $\pi$ $\models$ f.
+
+Now let us consider $\pi$ is not a k-loop. Then the formula f := $F_p$ is valid 
+along the path $\pi$ in the unbounded semantics if we can find an index i $>$ 0, for
+which p is not valid along the suffix $\pi$i of $\pi$.
+
+\textbf{Bounded Semantics without a loop}
+
+Let k $>$ 0, and let $\pi$ be  path that is not a k-loop. Then an LTL formula f 
+is valid along $\pi$ with bound k.
+
+
+\textbf{Reducing bounded model checking to SAT}
+
+In this section we will discuss how to reduce bounded model checking to 
+propositional satisfiability. Precisely this technique illustrate how propositional
+SAT solver can be used efficiently to perform bounded model checking.
+
+Let us consider, a kripke structure M, an LTL formula f and a bound k and we want 
+to construct a propositional formula $[[ M,f ]]_k$.
+
+$S_0$,...$S_k$ be a finite sequence of states on a path $\Pi$ .
+
+Each $S_i$ represents a state at time stamp i and consists of an assignment of 
+truth values from the set of state variables. The formula $[[M,f]]_k$ can be defined as
+the 3 separate formula.
+
+The first component defines a propositional formula $[[M]]_k$, that contains
+$S_0$...$S_k$ states to form a vital path starting from an initial state.
+
+For a Kripke structure M, k $>=$ 0.
+\begin{equation}
+   [[M]]_{k} := I(s_0) \wedge \bigwedge_{i=0}^{k-1} T(s_i,s_i+1)
+\end{equation}   
+  The shape of the path $\Pi$ plays a vital role as the translation of an LTL 
+  formula depends on the shape. The propositional formula is considered to be 
+  true if and only if a transition occurs from state $s_k$ to state $S_1$.
+  
+  the second component is a loop condition, that is propositional formula evaluates 
+  to true only if the path $\pi$ contains a loop.
+  
+  LOOP Condition
+  
+  The Loop condition $L_k$ is true if and only if there exists a back loop
+  from state $S_k$ to a previous state or to itself.
+  
+\begin{equation}
+     L_k := \bigvee_{l=0}^{k} _{l}L_{k}
+\end{equation}
+   
+           
+          
+  The third component defines a propositional formula that constraints $\pi$ to
+  satisfy P.

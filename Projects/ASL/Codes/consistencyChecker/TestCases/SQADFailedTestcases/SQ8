@@ -1,0 +1,4 @@
+double a;
+
+assume(a = 5);
+assert(a > 2);

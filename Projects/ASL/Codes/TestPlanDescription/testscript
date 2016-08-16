@@ -1,0 +1,28 @@
+
+
+
+
+
+
+consChecker sequence > output.ys
+chmod +x yices
+yices output.ys > logInputP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#-----------------------
+
+#Check
+
+#----------------------

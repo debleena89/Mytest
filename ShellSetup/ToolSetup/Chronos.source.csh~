@@ -1,0 +1,3 @@
+setenv CHRONOS_HOME /HOME/tools/chronos
+set path = ($path /home/debleena/tools/chronos)
+

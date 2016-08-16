@@ -1,0 +1,8 @@
+int *p;
+
+float x;
+
+p = &x;
+
+assert (*p == x);
+

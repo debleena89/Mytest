@@ -1,0 +1,136 @@
+\chapter{Conclusions and Future Work} \label{chap9}
+The focus of this thesis was to study the role of formal specifications in 
+the different facets of property verification. In the process of this 
+exercise, we came up with new techniques for specification analysis and 
+an arsenal of novel specification styles that can facilitate larger 
+penetration of property verification into the validation flows of companies. 
+In the light of the challenges identified in Chapter~\ref{chap1}, we believe 
+that this thesis fulfills the following objectives:
+
+\begin{itemize}
+
+\item The assertion coverage by constrained random
+    simulation is significantly improved by guiding the simulation through 
+	formal methods proposed in Chapter~\ref{chap3}.
+
+\item The scalability and efficiency of formal and
+    semi-formal verification is significantly enhanced in terms of 
+	expressibility and performance through the context-sensitive 
+	specification style. 
+
+\item The open specification style resulting as an 
+	outcome of annotating temporal operators has significant space 
+	advantages in model checking, since it allows validation of modules 
+	in isolation under specific environment scenarios.
+
+\end{itemize}
+
+\noindent
+Interestingly, the research presented in this thesis opens up a lot of 
+future avenues. The concept of property-guided simulation presented in 
+Chapter~\ref{chap3} may be extended to handle different types of 
+specification paradigms, viz. history-based, state-based. We need to study 
+the formal methods for this approach when we move to such paradigms, 
+and their effects on the overall performance. One of the main bottlenecks 
+of our approach of Chapter~\ref{chap3} is in realizability checking, 
+and there are apprehensions of degraded performance if we need 
+a realizability check at every iteration. There are two workarounds for 
+this: (a) consider a small subset of properties when performing the 
+realizability check, or (b) devise good approximate realizability 
+checking algorithms that can serve our purpose. We are working on these 
+to make our framework more scalable and efficient. 
+
+\noindent
+Context-sensitive specification styles have been quite well appreciated 
+in the assertion IP design community, particularly because of its 
+convenience in modeling complicated behavioral requirements. In 
+addition, we expect that the improvements in performance demonstrated by us 
+will also generate much interest. As we realized, this new style of having 
+small context state machines and context-sensitive properties is still at 
+a very nascent state of research and will open up lots of new research 
+problems. One of the directions of our current research on 
+context-sensitive specifications is to find out assumptions 
+and methodologies that 
+can make this new specification paradigm more amenable to FPV. In addition, we 
+are analyzing the effects of context state machines in a Counterexample 
+guided abstraction refinement framework (CEGAR), which is an 
+established practice in the early stages of the validation flow today
+(Figure~\ref{fig1.2}). We believe the context state machines can help 
+achieve faster closure in the refinement/abstraction loop and in the 
+verification of spurious counterexamples as well, since these are macro-models 
+of the actual implementation. The full potential of this specification 
+paradigm is still under exploration, and we believe that this new 
+specification style, when imbibed into the mainstream formal specification 
+flow, will produce significant benefits. 
+
+\noindent
+As we refine the design in steps by decomposing
+its functionality into that of its blocks and adding level specific
+details, we must also refine the formal specification -- starting from the
+architectural specification, down to the block level specifications,
+and finally down to the specifications of unit level modules. Current 
+specification languages are not well suited for this decomposition, as 
+mentioned in Chapter~\ref{chap7}, and we believe that our methodology 
+of assume-guarantee specification, separating the assume from the 
+guarantee is of significant value. We have analyzed the FPV effects of 
+this new specification paradigm. As future work, we wish to take up 
+two directions (a) consistency analysis of this specification paradigm, 
+and (b) effects of this specification style in a semi-formal framework. 
+While the methodology behind the first is still to be worked out, the 
+second problem is intuitively more easy to approach. For this, we feel that 
+we can translate the environment scenarios annotating the temporal operators 
+into a simulation test plan to be used for DPV. This test plan will be able to 
+capture the correct test-bench conditions for which a given property is to 
+be validated, thereby increasing assertion coverage.
+
+\noindent
+Last but not the least, our efforts in Chapter~\ref{chap8} in 
+devising a fully-functional DPV framework for UML Statechart validation 
+is expected to open up a lot of future research avenues. Till date, most 
+of the research in this direction has been based on support for feature-rich 
+languages and the corresponding FPV methods to handle large and complex 
+software state spaces. Our proposal in this direction is novel, in the sense, 
+that it extends the current trends in hardware validation to a software 
+architecture. There are lots of issues still to be solved, like 
+multi-threading, concurrency etc. and hence, we believe, a bundle of new open 
+research problems to emerge as we migrate our formal methods to software. 
+As future work, we intend to investigate the effects of non-vacuous test 
+case generation in the context of Action-LTL properties with data 
+attributes and parameterized events to improve the overall assertion 
+coverage of the DPV process.
+
+\noindent
+There has been several important realizations during the conceptualization of
+this thesis. We mention some of these below:
+\begin{enumerate}
+
+\item Model checking has hit a complexity barrier which we cannot adequately
+    overcome by adopting engineering ideas in FPV tools. We need new formal 
+	methods for abstraction and pruning.
+
+\item If we can develop large designs by decomposition, then we should also
+    be able to verify large designs by decomposition. If design
+    decomposition can be conceived by human beings, then specification
+    decomposition can also be conceived by human beings. We only need to
+    provide formal methods to verify the design decompositions 
+	against their corresponding specifications under 
+	the right environment conditions.
+
+\item Verifying the consistency and completeness of formal property
+    specifications will become an increasingly significant problem. We
+    need good tools for this purpose, if property verification 
+    is to be adopted by many. 
+
+\item Specification guided automatic test generation and simulation will
+    become a reality. We will have to look for bugs in the right places
+    -- it will be increasingly infeasible for simulation to look for
+    them everywhere.
+
+\end{enumerate}
+\noindent
+All these point out to the fact that property verification technology is 
+poised at an interesting state today. Many chip design companies realize 
+that this technology holds tremendous potential, and yet are unable to 
+seamlessly adopt the technology into their validation flow because of the 
+missing pieces in the integrated validation flow. We believe this thesis 
+has addressed some of these missing pieces in a truly effective way.

@@ -1,0 +1,5 @@
+
+int a,b;
+assert (a = 6);
+assert (a > b);
+

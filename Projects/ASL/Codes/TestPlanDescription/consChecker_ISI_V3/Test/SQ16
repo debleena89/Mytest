@@ -1,0 +1,4 @@
+int a,b;
+assume(a = 1);
+assume(b = 2);
+assert(a == b);

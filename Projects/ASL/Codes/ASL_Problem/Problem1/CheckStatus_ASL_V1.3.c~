@@ -1,0 +1,122 @@
+/**************** ENGLISH SPECIFICATIONS**************************/
+//There are two systems sys1 and sys2. Each systems health is 
+//assesed by two flags namely data flag and OK flag. 
+//If both the sysems are healthy, then both the systems buffer 
+//data need to be considered for determining the state. If either 
+//of the system is healthy then only the corresponding buffer 
+//to be considered for determining the state. If both systems are 
+//not Ok, then state is NOTOK.
+
+//If both systems are healthy and 
+//    **If we are checking for ON state, then either of the systems 
+//    buffer data should be 1.
+//    **If we are checking for OFF state, then both the systems 
+//    buffer data should be 0.
+
+/************** END OF ENGLISH SPECIFICATIONS********************/
+
+#define false 0
+#define true 1
+
+unsigned char sys1buf[100], sys2buf[100]; 
+unsigned char nondet_unsignedchar();
+int nondet_int();
+int No_sys1_data = nondet_int();
+int No_sys2_data = nondet_int();
+int sys1_notok = nondet_int();
+int sys2_notok = nondet_int();
+unsigned char mask = 0x01;
+unsigned char chnum = nondet_unsignedchar();
+int bit, byte;
+
+__CPROVER_bool get_status(__CPROVER_bool on_off)
+{
+    __CPROVER_bool output, output_undef = false, ret = false;
+
+    /////////////detect output///////////////////////
+    if ((!No_sys1_data && !sys1_notok) && (!No_sys2_data && !sys2_notok))
+    {
+        //if both systems are healthy, any one DIP ON  shows output is ON
+        if ((sys1buf[byte] & mask) || (sys2buf[byte] & mask))
+            output = true;
+        else
+            output = false;
+    }
+    else if(!No_sys1_data && !sys1_notok)
+    {
+        //if only Sys1 OK, take sys1 data as output
+        output = sys1buf[byte] & mask;
+    }
+    else if(!No_sys2_data && !sys2_notok)
+    {
+        //if only sys2OK, take sys2 data as output
+        output = sys2buf[byte] & mask;
+    }
+    else 
+    {
+        //If both systems NOTOK, output cannot be determined
+        output_undef = true;
+    }
+
+    ///////////////set ret value/////////////////////
+    if (output_undef) 
+        ret = false;
+    else if (on_off == output) 
+        ret = true;
+    else 
+        ret = false;     
+    /////////////////////////////////////////////////
+    return (ret);
+}
+
+
+int main()
+{
+    __CPROVER_bool t ;
+    __CPROVER_bool on_off;
+    __CPROVER_bool SYS1OK, SYS2OK, SYS1NOK, SYS2NOK,OK, OK1, OK2, OK3, OK4, OK5, OK6; 
+    __CPROVER_bool NOK1, NOK2, NOK3, NOK4, NOK5, NOK6, NOK7, NOK;
+    int i;
+
+    byte = chnum / 8;
+    bit = chnum % 8;
+    mask = mask << bit;
+
+    for (i = 0; i < 100; i++)
+    {
+        sys1buf[i] = nondet_unsignedchar();
+        sys2buf[i] = nondet_unsignedchar();
+    }
+
+    t = get_status(on_off);
+  
+    SYS1OK =  ((No_sys1_data == 0) && (sys1_notok == 0));
+    SYS2OK =  ((No_sys2_data == 0) && (sys2_notok == 0));
+    SYS1NOK = ((No_sys1_data != 0) || (sys1_notok != 0));
+    SYS2NOK = ((No_sys2_data != 0) || (sys2_notok != 0));
+
+    OK1 = ((SYS1OK) && (SYS2OK) && (on_off ) &&  ((sys1buf[byte] & mask) || (sys2buf[byte] & mask)));
+    OK2 = ((SYS1OK) && (SYS2OK) && (!on_off) &&  ((!(sys1buf[byte] & mask)) && (!(sys2buf[byte] & mask))));
+	OK3 = ( (SYS1OK) && (SYS2NOK) && (on_off) &&  (sys1buf[byte] & mask)   );
+    //OK3 = ((SYS1OK) && (SYS1NOK) && (on_off) && (sys1buf[byte] & mask));
+    OK4 = ((SYS1OK) && (SYS2NOK) && (!on_off) && (!(sys1buf[byte] & mask)));
+    OK5 = ((SYS1NOK) && (SYS2OK) && (on_off) && (sys2buf[byte] & mask));
+    OK6 = ((SYS1NOK) && (SYS2OK) && (!on_off) && (!(sys2buf[byte] & mask))); 
+
+    // OK = ( (OK1) || (OK2)|| (OK3) || (OK4) || (OK5) || (OK6) );
+    OK =  ((OK1) ^ (OK2) ^ (OK3) ^ (OK4) ^ (OK5) ^ (OK6));
+
+    NOK1 = ((SYS1OK) && (SYS2OK) && (on_off) && ((!(sys1buf[byte] & mask)) && (!(sys2buf[byte] & mask))));
+    NOK2 = ((SYS1OK) && (SYS2OK) && (!on_off) && ((sys1buf[byte] & mask) || (sys2buf[byte] & mask))) ;
+    NOK3 = ((SYS1OK) && (SYS2NOK) && (on_off) && (!(sys1buf[byte] & mask))) ;
+    NOK4 = ((SYS1OK) && (SYS2NOK) && (!on_off) && (sys1buf[byte] & mask)) ;
+    NOK5 = ((SYS1NOK) && (SYS2OK) && (on_off) && (!(sys2buf[byte] & mask))) ;
+    NOK6 = ((SYS1NOK) && (SYS2OK) && (!on_off) && (sys2buf[byte] & mask)) ;
+    NOK7 = ((SYS1NOK) && (SYS2NOK));
+
+    NOK = ((NOK1) ^ (NOK2) ^ (NOK3) ^ (NOK4) ^ (NOK5) ^ (NOK6) ^ (NOK7));
+    //NOK = ( (NOK1) || (NOK2) || (NOK3) || (NOK4) || (NOK5) || (NOK6) || (NOK7) );
+      
+    assert(!OK || (t!= 0));
+    assert(!NOK || (t==0));
+}
